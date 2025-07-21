@@ -64,8 +64,8 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
               />
             </div>
             <h2 className="text-xl font-bold text-slate-800 mb-1">aprendiendo con patsy</h2>
-            <p className="text-sm text-slate-500 mb-2">Patsy The Pug • she/her</p>
-            <p className="text-xs text-slate-600 max-w-xs mx-auto">Mini dev en entrenamiento, caos con patitas 🐾</p>
+            <p className="text-sm text-slate-500 mb-2">Patsy Pugneranian • she/her</p>
+            <p className="text-xs text-slate-600 max-w-xs mx-auto">Mini dev en entrenamiento, caos con patitas 💻</p>
           </div>
           <h1 className="text-4xl font-bold text-slate-800 mb-2">
             <Timer className="inline-block h-10 w-10 text-blue-600 mr-3" />
@@ -312,15 +312,16 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 text-xl mb-1">Patsy The Pug</h3>
+                    <h3 className="font-bold text-slate-900 text-xl mb-1">Patsy Pugneranian</h3>
                     <p className="text-slate-500 text-sm mb-3">@PatsyThePug</p>
                     <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                      Patsy Pugnetarian, edición limitada con glitter. Debugueo conexiones, rompo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas. 🐾
+                      Patsy Pugnerarian, edición limitada con glitter. Debuggeo emociones, rompo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas. 💻
                     </p>
-                    <div className="flex justify-center gap-4 text-xs text-slate-500">
-                      <span>📍 Deploy.Mini</span>
+                    <div className="flex justify-center gap-4 text-xs text-slate-500 mb-2">
+                      <span>📍 CIUDAD DE MEXICO</span>
                       <span>🔗 dev en entrenamiento</span>
                     </div>
+                    <p className="text-xs text-slate-400">Joined last month</p>
                   </div>
                 </div>
               </CardContent>
