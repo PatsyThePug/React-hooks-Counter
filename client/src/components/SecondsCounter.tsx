@@ -12,42 +12,35 @@ interface SecondsCounterProps {
   seconds?: number;
 }
 
-export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterProps) {
-  const counter = useCounter();
-  const [alert, setAlert] = useState<{ message: string; type: string; visible: boolean }>({
-    message: '',
-    type: 'success',
-    visible: false,
-  });
+export default function SecondsCounter() {
+  const [seconds, setSeconds] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
 
-  // Set up alert callback
   useEffect(() => {
-    (counter as any).setAlertCallback((message: string, type: string = 'success') => {
-      setAlert({ message, type, visible: true });
-    });
-  }, [counter]);
-
-  // Handle prop seconds (for external control)
-  useEffect(() => {
-    if (propSeconds !== undefined) {
-      // This allows the component to be controlled externally via props
-      // as mentioned in the requirements
+    let interval: NodeJS.Timeout | null = null;
+    
+    if (isRunning) {
+      interval = setInterval(() => {
+        setSeconds(prevSeconds => prevSeconds + 1);
+      }, 1000);
     }
-  }, [propSeconds]);
 
-  const handleDismissAlert = () => {
-    setAlert(prev => ({ ...prev, visible: false }));
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [isRunning]);
+
+  const handleStart = () => setIsRunning(true);
+  const handleStop = () => setIsRunning(false);
+  const handleReset = () => {
+    setIsRunning(false);
+    setSeconds(0);
   };
 
-  const handleSetCountdown = () => {
-    if (counter.targetTime && counter.targetTime > 0) {
-      counter.setMode('countdown');
-      setAlert({
-        message: `Countdown set to ${counter.targetTime} seconds!`,
-        type: 'success',
-        visible: true,
-      });
-    }
+  const formatTime = (totalSeconds: number) => {
+    const mins = Math.floor(totalSeconds / 60);
+    const secs = totalSeconds % 60;
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
   return (

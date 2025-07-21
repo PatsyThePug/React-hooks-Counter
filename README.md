@@ -1,168 +1,140 @@
-# React Seconds Counter ⏱️
+# React Seconds Counter
 
-Una aplicación avanzada de contador de segundos construida con React y tecnologías web modernas. La aplicación incluye funcionalidades de cuenta regresiva, controles completos y notificaciones inteligentes.
+A simple and educational React counter application demonstrating fundamental React hooks. Perfect for learning React concepts with hands-on examples and clean, readable code.
 
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+## 🚀 Features
 
-## ✨ Características
+### Simple Counter Functionality
+- **Basic Timer**: Clean seconds counter with start/stop/reset controls
+- **Visual Display**: Large, easy-to-read timer format (MM:SS)
+- **Interactive Controls**: Simple buttons for timer management
+- **Responsive Design**: Works on desktop and mobile devices
 
-- **Contador Avanzado**: Cuenta tiempo transcurrido desde la carga de la página o cuenta regresiva desde un tiempo objetivo
-- **Controles Completos**: Funciones de iniciar, parar, pausar, reanudar y reiniciar
-- **Alertas Inteligentes**: Notificaciones visuales y sonoras cuando se alcanza un tiempo específico
-- **Modos Flexibles**: 
-  - **Modo Elapsed**: Cuenta hacia arriba desde cero
-  - **Modo Countdown**: Cuenta regresiva desde un tiempo establecido
-- **Configuración Avanzada**: Panel de configuración para personalizar alertas y objetivos
-- **Estadísticas de Sesión**: Seguimiento del tiempo total, número de sesiones y alertas activadas
-- **Diseño Responsivo**: Interfaz moderna que funciona en todos los dispositivos
+### Educational Content
+- **React Hooks Demo**: Real-world examples of `useState` and `useEffect`
+- **Clean Code**: Well-commented, beginner-friendly code structure
+- **Learning Focus**: Demonstrates core React concepts without complexity
+- **Code Examples**: Live code snippets showing hook implementation
 
-## 🚀 Tecnologías Utilizadas
+## 🛠️ Tech Stack
 
-### Frontend
-- **React 18+** con TypeScript para componentes modernos y type-safe
-- **Wouter** para routing ligero del lado del cliente
-- **shadcn/ui** componentes basados en Radix UI para accesibilidad
-- **Tailwind CSS** para estilos modernos y responsive
-- **TanStack Query** para manejo eficiente del estado del servidor
-- **Vite** como bundler rápido para desarrollo
+- **React 18** - Modern React with hooks
+- **TypeScript** - Type-safe JavaScript development
+- **Tailwind CSS** - Utility-first styling
+- **Vite** - Fast build tool and development server
+- **Shadcn/UI** - Beautiful, accessible components
 
-### Backend
-- **Express.js** con TypeScript para APIs robustas
-- **In-Memory Storage** para almacenamiento ligero y rápido
-- **Session Management** con memoria para desarrollo
+## 🎯 Learning Objectives
 
-### DevOps y Herramientas
-- **Hot Reloading** con Vite y tsx
-- **ESM Modules** en toda la aplicación
-- **Configuración TypeScript** estricta para mayor calidad de código
+This project demonstrates:
 
-## 🛠️ Instalación y Desarrollo
+1. **useState Hook**: Managing component state for timer values and controls
+2. **useEffect Hook**: Handling side effects like intervals and cleanup
+3. **Component Structure**: Building reusable, maintainable components
+4. **Event Handling**: Implementing user interactions with proper state updates
+5. **Conditional Rendering**: Displaying different UI based on application state
 
-### Prerrequisitos
-- Node.js 18+ 
-- npm o yarn
+## 🚦 Getting Started
 
-### Configuración Local
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-1. **Clona el repositorio**
+### Installation
+
+1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/yourusername/react-seconds-counter.git
    cd react-seconds-counter
    ```
 
-2. **Instala las dependencias**
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Ejecuta la aplicación en modo desarrollo**
+3. Start the development server:
    ```bash
    npm run dev
    ```
 
-4. **Abre tu navegador**
-   ```
-   http://localhost:5000
-   ```
+4. Open your browser and visit `http://localhost:5000`
 
-## 📱 Uso
+## 💻 Core Implementation
 
-### Controles Básicos
-- **Start**: Inicia el contador
-- **Pause**: Pausa temporalmente el contador
-- **Resume**: Reanuda desde donde se pausó
-- **Stop**: Detiene completamente el contador
-- **Reset**: Reinicia a cero o al tiempo objetivo
-
-### Configuración de Alertas
-1. Ve al panel de configuración
-2. Establece un "Alert Time" en segundos
-3. El sistema te notificará cuando se alcance ese tiempo
-4. Las alertas incluyen sonido y notificación visual
-
-### Modo Countdown
-1. Selecciona "Countdown Mode" en configuración
-2. Establece el "Target Time" en segundos
-3. Haz clic en "Set Countdown"
-4. El contador iniciará desde ese tiempo hacia cero
-
-## 🏗️ Arquitectura del Proyecto
-
-```
-├── client/               # Frontend React
-│   ├── src/
-│   │   ├── components/   # Componentes React
-│   │   │   ├── SecondsCounter.tsx    # Componente principal
-│   │   │   ├── CounterDisplay.tsx    # Display del contador
-│   │   │   ├── ControlButtons.tsx    # Botones de control
-│   │   │   ├── SettingsPanel.tsx     # Panel de configuración
-│   │   │   └── AlertNotification.tsx # Sistema de alertas
-│   │   ├── hooks/        # Custom hooks
-│   │   │   └── useCounter.ts         # Hook principal del contador
-│   │   ├── pages/        # Páginas de la aplicación
-│   │   └── lib/          # Utilidades y configuración
-├── server/               # Backend Express
-│   ├── index.ts         # Servidor principal
-│   ├── routes.ts        # Rutas API
-│   └── storage.ts       # Capa de persistencia
-├── shared/              # Código compartido
-│   └── schema.ts        # Esquemas de datos con Drizzle
-└── components.json      # Configuración shadcn/ui
+### useState Hook Example
+```javascript
+const [seconds, setSeconds] = useState(0);
+const [isRunning, setIsRunning] = useState(false);
 ```
 
-## 🔧 Scripts Disponibles
+### useEffect Hook Example
+```javascript
+useEffect(() => {
+  let interval = null;
+  
+  if (isRunning) {
+    interval = setInterval(() => {
+      setSeconds(prevSeconds => prevSeconds + 1);
+    }, 1000);
+  }
 
-- `npm run dev` - Inicia desarrollo con hot reloading
-- `npm run build` - Construye la aplicación para producción
-- `npm run preview` - Preview de la build de producción
+  return () => {
+    if (interval) clearInterval(interval);
+  };
+}, [isRunning]);
+```
 
+## 📁 Project Structure
 
-## 🎯 Características Técnicas Destacadas
+```
+src/
+├── components/
+│   └── SimpleCounter.tsx    # Main counter component
+├── pages/
+│   └── counter.tsx         # Counter page
+├── App.tsx                 # App router
+└── main.tsx               # Entry point
+```
 
-### Gestión de Estado Avanzada
-- Hook personalizado `useCounter` que maneja todo el estado del timer
-- Sincronización precisa con `setInterval()` y timestamps
-- Manejo de estados complejos (running, paused, mode switching)
+## 🎨 Features in Detail
 
-### Sistema de Alertas
-- Web Audio API para sonidos de notificación
-- Sistema de toast notifications
-- Prevención de alertas duplicadas con referencias
+### Timer Controls
+- **Start**: Begin counting seconds
+- **Stop**: Pause the timer
+- **Reset**: Reset counter to 00:00
 
-### Persistencia de Datos
-- Estadísticas de sesión en tiempo real en memoria
-- Almacenamiento ligero para desarrollo
-- Estado persistente durante la sesión de la aplicación
+### Educational Elements
+- **Live Code Examples**: See the actual hooks code in action
+- **Concept Explanations**: Understanding useState and useEffect
+- **Clean Architecture**: Learn from well-structured React components
 
-### Arquitectura Escalable
-- Separación clara entre cliente y servidor
-- Tipos TypeScript compartidos
-- Interfaces abstraídas para fácil extensión
+## 🌟 About the Creator
 
-## 📄 Licencia
+**Patsy Pugnerarian** - Mini dev en entrenamiento  
+*Debuggeo emociones, rompo código, duermo en deploy. Caos con patitas.* 💻
 
-MIT License - ver el archivo [LICENSE](LICENSE) para detalles.
+Based in Ciudad de México, learning and building with modern web technologies.
 
-## 🤝 Contribuir
+## 📄 License
 
-Las contribuciones son bienvenidas. Por favor:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-1. Haz fork del proyecto
-2. Crea una branch para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la branch (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+## 🤝 Contributing
 
-## 🙏 Reconocimientos
+Contributions are welcome! This is an educational project perfect for:
+- First-time contributors
+- Learning React fundamentals  
+- Practicing clean code principles
+- Understanding modern development workflow
 
-- **shadcn/ui** por los componentes de interfaz elegantes
-- **Radix UI** por los primitives accessibles
-- **Tailwind CSS** por el sistema de estilos utility-first
-- **Vite** por la experiencia de desarrollo increíble
+## 📚 Additional Resources
+
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [React Hooks Guide](https://reactjs.org/docs/hooks-intro.html)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Vite Documentation](https://vitejs.dev/guide/)
 
 ---
 
-⭐ Si te gusta este proyecto, ¡no olvides darle una estrella en GitHub!
+Made with ❤️ for learning React fundamentals
