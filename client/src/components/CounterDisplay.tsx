@@ -1,7 +1,7 @@
 import { Clock, Activity } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import ControlButtons from './ControlButtons';
+import ControlButtons from '@/components/ControlButtons';
 import { CounterMode } from '@/hooks/useCounter';
 
 interface CounterDisplayProps {

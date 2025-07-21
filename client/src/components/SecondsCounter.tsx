@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Timer, Code } from 'lucide-react';
+import { SiReact, SiTypescript, SiTailwindcss, SiVite, SiPostgresql, SiGithub } from 'react-icons/si';
 import { useCounter } from '@/hooks/useCounter';
 import CounterDisplay from './CounterDisplay';
 import SettingsPanel from './SettingsPanel';
@@ -102,11 +103,42 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
         {/* Footer */}
         <footer className="mt-12 text-center text-slate-500 text-sm">
           <div className="border-t border-slate-200 pt-6">
-            <p>Built with React and modern web technologies</p>
-            <p className="mt-1">
+            <p className="mb-4">Built with React and modern web technologies</p>
+            
+            {/* Technology Icons */}
+            <div className="flex justify-center items-center gap-6 mb-4">
+              <div className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors">
+                <SiReact className="h-5 w-5" />
+                <span className="text-xs font-medium">React</span>
+              </div>
+              <div className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors">
+                <SiTypescript className="h-5 w-5" />
+                <span className="text-xs font-medium">TypeScript</span>
+              </div>
+              <div className="flex items-center gap-2 text-cyan-500 hover:text-cyan-600 transition-colors">
+                <SiTailwindcss className="h-5 w-5" />
+                <span className="text-xs font-medium">Tailwind CSS</span>
+              </div>
+              <div className="flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors">
+                <SiVite className="h-5 w-5" />
+                <span className="text-xs font-medium">Vite</span>
+              </div>
+              <div className="flex items-center gap-2 text-blue-800 hover:text-blue-900 transition-colors">
+                <SiPostgresql className="h-5 w-5" />
+                <span className="text-xs font-medium">PostgreSQL</span>
+              </div>
+            </div>
+            
+            <p className="mb-3">
               <Code className="inline-block h-3 w-3 mr-1" />
               Demonstrates ReactDOM.createRoot(), setInterval(), and component lifecycle management
             </p>
+            
+            {/* GitHub Ready Banner */}
+            <div className="inline-flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700">
+              <SiGithub className="h-4 w-4 text-slate-600 dark:text-slate-400" />
+              <span className="text-slate-700 dark:text-slate-300 font-medium">Ready for GitHub!</span>
+            </div>
           </div>
         </footer>
       </div>
