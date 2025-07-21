@@ -116,9 +116,15 @@ src/
 
 Based in Ciudad de México, learning and building with modern web technologies.
 
-## 📄 License
+## 📄 Propiedad del Código
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Este código es **completamente tuyo**. No hay restricciones de licencia - puedes:
+- Usarlo comercialmente
+- Modificarlo como quieras  
+- Distribuirlo libremente
+- Venderlo si deseas
+
+El código te pertenece al 100%.
 
 ## 🤝 Contributing
 
