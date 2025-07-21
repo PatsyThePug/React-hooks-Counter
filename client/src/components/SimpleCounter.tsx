@@ -48,7 +48,7 @@ export default function SimpleCounter() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 mb-2">aprendiendo con patsy</h2>
+            <h2 className="text-2xl font-black text-slate-900 mb-2">Aprendiendo con Patsy</h2>
           </div>
           <h1 className="text-5xl font-black text-slate-900 mb-3">
             <Timer className="inline-block h-12 w-12 text-blue-600 mr-3" />
