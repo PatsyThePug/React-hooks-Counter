@@ -181,37 +181,28 @@ export default function SimpleCounter() {
               </div>
             </div>
             
-            {/* GitHub Style Profile Card */}
-            <Card className="max-w-md mx-auto mb-6 bg-white border-slate-300 shadow-lg">
-              <CardContent className="p-8">
-                <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden border-2 border-slate-300 shadow-lg">
-                    <img 
-                      src={patsyImage} 
-                      alt="Patsy The Pug" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-black text-slate-800 text-2xl mb-2">Patsy The Pug_dev</h3>
-                    <p className="text-slate-600 text-base font-semibold mb-4">@PatsyThePug</p>
-                    <p className="text-slate-700 text-base leading-relaxed mb-6">
-                      Patsy Pugnerarian, edición limitada con glitter. Debuggeo emociones, rompo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas. 💻
-                    </p>
-                    <div className="flex justify-center gap-6 text-sm text-slate-600 font-medium mb-3">
-                      <span>📍 CIUDAD DE MEXICO</span>
-                      <span>🔗 dev en entrenamiento</span>
-                    </div>
-                    <p className="text-sm text-slate-500 font-medium">Joined last month</p>
-                  </div>
+            {/* Bottom Footer Section */}
+            <div className="flex justify-center items-center gap-6 flex-wrap">
+              {/* GitHub Ready Banner */}
+              <div className="inline-flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-full border border-slate-200">
+                <SiGithub className="h-4 w-4 text-slate-600" />
+                <span className="text-slate-700 font-medium">Ready for GitHub!</span>
+              </div>
+              
+              {/* Patsy Profile - Compact */}
+              <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">
+                <div className="w-10 h-10 rounded-full overflow-hidden border border-slate-300">
+                  <img 
+                    src={patsyImage} 
+                    alt="Patsy The Pug" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </CardContent>
-            </Card>
-            
-            {/* GitHub Ready Banner */}
-            <div className="inline-flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-full border border-slate-200">
-              <SiGithub className="h-4 w-4 text-slate-600" />
-              <span className="text-slate-700 font-medium">Ready for GitHub!</span>
+                <div className="text-left">
+                  <p className="text-sm font-bold text-slate-800">Patsy The Pug_dev</p>
+                  <p className="text-xs text-slate-600">Mini dev en entrenamiento</p>
+                </div>
+              </div>
             </div>
           </div>
         </footer>
