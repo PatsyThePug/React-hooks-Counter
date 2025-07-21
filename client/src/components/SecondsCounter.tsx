@@ -6,7 +6,7 @@ import CounterDisplay from './CounterDisplay';
 import SettingsPanel from './SettingsPanel';
 import AlertNotification from './AlertNotification';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import patsyImage from '@assets/Captura de pantalla (629)_1753127473266.png';
+import patsyImage from '@assets/dev 3_1753127624549.png';
 
 interface SecondsCounterProps {
   seconds?: number;
@@ -56,15 +56,16 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
         {/* Header Section */}
         <header className="text-center mb-8 animate-in slide-in-from-top duration-500">
           <div className="mb-6">
-            <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-xl border-4 border-orange-300">
+            <div className="w-28 h-28 mx-auto mb-4 rounded-2xl overflow-hidden shadow-xl border border-slate-300">
               <img 
                 src={patsyImage} 
                 alt="Patsy The Pug" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <h2 className="text-xl font-bold text-orange-600 mb-2">aprendiendo con patsy</h2>
-            <p className="text-sm text-orange-500">Patsy The Pug dev - Mini dev en entrenamiento</p>
+            <h2 className="text-xl font-bold text-slate-800 mb-1">aprendiendo con patsy</h2>
+            <p className="text-sm text-slate-500 mb-2">Patsy The Pug • she/her</p>
+            <p className="text-xs text-slate-600 max-w-xs mx-auto">Mini dev en entrenamiento, caos con patitas 🐾</p>
           </div>
           <h1 className="text-4xl font-bold text-slate-800 mb-2">
             <Timer className="inline-block h-10 w-10 text-blue-600 mr-3" />
@@ -123,15 +124,15 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
             <p className="text-slate-600 text-lg max-w-3xl mx-auto">
               Aprende cómo funcionan los hooks principales de React en este contador de segundos
             </p>
-            <div className="inline-flex items-center gap-3 mt-4 bg-orange-50 px-6 py-3 rounded-full border border-orange-200">
-              <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-orange-300">
+            <div className="inline-flex items-center gap-3 mt-4 bg-slate-50 px-6 py-3 rounded-lg border border-slate-200">
+              <div className="w-8 h-8 rounded-lg overflow-hidden border border-slate-300">
                 <img 
                   src={patsyImage} 
                   alt="Patsy" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="text-orange-700 text-sm font-medium">Patsy explica: "¡Caos con patitas pero código limpio!"</span>
+              <span className="text-slate-700 text-sm font-medium">Patsy explica: "¡Caos con patitas pero código limpio!"</span>
             </div>
           </div>
 
@@ -299,23 +300,27 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
               Demonstrates ReactDOM.createRoot(), setInterval(), and component lifecycle management
             </p>
             
-            {/* Patsy Profile Card */}
-            <Card className="max-w-md mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 border-orange-200">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden border-3 border-orange-300 shadow-lg">
+            {/* GitHub Style Profile Card */}
+            <Card className="max-w-sm mx-auto mb-6 bg-white border-slate-200 shadow-sm">
+              <CardContent className="p-6">
+                <div className="text-center">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
                     <img 
                       src={patsyImage} 
                       alt="Patsy The Pug" 
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-orange-800 text-lg">Patsy The Pug</h3>
-                    <p className="text-orange-600 text-sm font-medium">she/her</p>
-                    <p className="text-slate-600 text-xs mt-2 leading-relaxed">
+                  <div>
+                    <h3 className="font-bold text-slate-900 text-xl mb-1">Patsy The Pug</h3>
+                    <p className="text-slate-500 text-sm mb-3">@PatsyThePug</p>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-4">
                       Patsy Pugnetarian, edición limitada con glitter. Debugueo conexiones, rompo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas. 🐾
                     </p>
+                    <div className="flex justify-center gap-4 text-xs text-slate-500">
+                      <span>📍 Deploy.Mini</span>
+                      <span>🔗 dev en entrenamiento</span>
+                    </div>
                   </div>
                 </div>
               </CardContent>
