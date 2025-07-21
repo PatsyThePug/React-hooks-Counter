@@ -116,15 +116,7 @@ src/
 
 Based in Ciudad de México, learning and building with modern web technologies.
 
-## 📄 Propiedad del Código
 
-Este código es **completamente tuyo**. No hay restricciones de licencia - puedes:
-- Usarlo comercialmente
-- Modificarlo como quieras  
-- Distribuirlo libremente
-- Venderlo si deseas
-
-El código te pertenece al 100%.
 
 ## 🤝 Contributing
 
