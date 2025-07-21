@@ -6,6 +6,7 @@ import CounterDisplay from './CounterDisplay';
 import SettingsPanel from './SettingsPanel';
 import AlertNotification from './AlertNotification';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import patsyImage from '@assets/Captura de pantalla (629)_1753127473266.png';
 
 interface SecondsCounterProps {
   seconds?: number;
@@ -54,6 +55,17 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <header className="text-center mb-8 animate-in slide-in-from-top duration-500">
+          <div className="mb-6">
+            <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-xl border-4 border-orange-300">
+              <img 
+                src={patsyImage} 
+                alt="Patsy The Pug" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h2 className="text-xl font-bold text-orange-600 mb-2">aprendiendo con patsy</h2>
+            <p className="text-sm text-orange-500">Patsy The Pug dev - Mini dev en entrenamiento</p>
+          </div>
           <h1 className="text-4xl font-bold text-slate-800 mb-2">
             <Timer className="inline-block h-10 w-10 text-blue-600 mr-3" />
             React Seconds Counter
@@ -111,6 +123,16 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
             <p className="text-slate-600 text-lg max-w-3xl mx-auto">
               Aprende cómo funcionan los hooks principales de React en este contador de segundos
             </p>
+            <div className="inline-flex items-center gap-3 mt-4 bg-orange-50 px-6 py-3 rounded-full border border-orange-200">
+              <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-orange-300">
+                <img 
+                  src={patsyImage} 
+                  alt="Patsy" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="text-orange-700 text-sm font-medium">Patsy explica: "¡Caos con patitas pero código limpio!"</span>
+            </div>
           </div>
 
           {/* React Hooks Concepts */}
@@ -276,6 +298,28 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
               <Code className="inline-block h-3 w-3 mr-1" />
               Demonstrates ReactDOM.createRoot(), setInterval(), and component lifecycle management
             </p>
+            
+            {/* Patsy Profile Card */}
+            <Card className="max-w-md mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 border-orange-200">
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-full overflow-hidden border-3 border-orange-300 shadow-lg">
+                    <img 
+                      src={patsyImage} 
+                      alt="Patsy The Pug" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-orange-800 text-lg">Patsy The Pug</h3>
+                    <p className="text-orange-600 text-sm font-medium">she/her</p>
+                    <p className="text-slate-600 text-xs mt-2 leading-relaxed">
+                      Patsy Pugnetarian, edición limitada con glitter. Debugueo conexiones, rompo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas. 🐾
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
             
             {/* GitHub Ready Banner */}
             <div className="inline-flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700">
