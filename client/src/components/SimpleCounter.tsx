@@ -63,7 +63,7 @@ export default function SimpleCounter() {
 
         {/* Simple Counter Display */}
         <div className="mb-8">
-          <Card className="max-w-md mx-auto">
+          <Card className="max-w-md mx-auto bg-gradient-to-br from-blue-50 to-purple-50 border-blue-200 shadow-xl">
             <CardContent className="p-8 text-center">
               <div className="text-6xl font-mono font-bold text-blue-600 mb-6">
                 {formatTime(seconds)}
