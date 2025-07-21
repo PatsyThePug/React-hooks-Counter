@@ -191,11 +191,11 @@ export default function SimpleCounter() {
               
               {/* Patsy Profile - Compact */}
               <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">
-                <div className="w-10 h-10 rounded-full overflow-hidden border border-slate-300">
+                <div className="w-16 h-12">
                   <img 
                     src={patsyImage} 
                     alt="Patsy The Pug" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="text-left">
