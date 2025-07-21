@@ -111,8 +111,8 @@ src/
 
 ## 🌟 About the Creator
 
-**Patsy Pugnerarian** - Mini dev en entrenamiento  
-*Debuggeo emociones, rompo código, duermo en deploy. Caos con patitas.* 💻
+**Patsy The Pug_dev** - Mini dev en entrenamiento  
+*Patsy Pugnerarian, edición limitada con glitter. Debuggeo emociones, rompo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas.* 💻
 
 Based in Ciudad de México, learning and building with modern web technologies.
 
