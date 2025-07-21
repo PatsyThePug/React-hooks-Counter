@@ -184,10 +184,10 @@ export default function SimpleCounter() {
             </div>
             
             {/* GitHub Style Profile Card */}
-            <Card className="max-w-sm mx-auto mb-6 bg-white border-slate-200 shadow-sm">
-              <CardContent className="p-6">
+            <Card className="max-w-md mx-auto mb-6 bg-white border-slate-300 shadow-lg">
+              <CardContent className="p-8">
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden border-2 border-slate-300 shadow-lg">
                     <img 
                       src={patsyImage} 
                       alt="Patsy The Pug" 
@@ -195,16 +195,16 @@ export default function SimpleCounter() {
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 text-xl mb-1">Patsy Pugnerarian</h3>
-                    <p className="text-slate-500 text-sm mb-3">@PatsyThePug</p>
-                    <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    <h3 className="font-black text-slate-800 text-2xl mb-2">Patsy Pugnerarian</h3>
+                    <p className="text-slate-600 text-base font-semibold mb-4">@PatsyThePug</p>
+                    <p className="text-slate-700 text-base leading-relaxed mb-6">
                       Patsy Pugnerarian, edición limitada con glitter. Debuggeo emociones, rompo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas. 💻
                     </p>
-                    <div className="flex justify-center gap-4 text-xs text-slate-500 mb-2">
+                    <div className="flex justify-center gap-6 text-sm text-slate-600 font-medium mb-3">
                       <span>📍 CIUDAD DE MEXICO</span>
                       <span>🔗 dev en entrenamiento</span>
                     </div>
-                    <p className="text-xs text-slate-400">Joined last month</p>
+                    <p className="text-sm text-slate-500 font-medium">Joined last month</p>
                   </div>
                 </div>
               </CardContent>
