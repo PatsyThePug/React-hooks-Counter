@@ -48,15 +48,15 @@ export default function SimpleCounter() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h2 className="text-xl font-bold text-slate-800 mb-1">aprendiendo con patsy</h2>
-            <p className="text-sm text-slate-500 mb-2">Patsy Pugnerarian • she/her</p>
-            <p className="text-xs text-slate-600 max-w-xs mx-auto">Mini dev en entrenamiento, caos con patitas 💻</p>
+            <h2 className="text-2xl font-black text-slate-900 mb-2">aprendiendo con patsy</h2>
+            <p className="text-base text-slate-700 font-semibold mb-3">Patsy Pugnerarian • she/her</p>
+            <p className="text-sm text-slate-800 font-medium max-w-xs mx-auto">Mini dev en entrenamiento, caos con patitas 💻</p>
           </div>
-          <h1 className="text-4xl font-bold text-slate-800 mb-2">
-            <Timer className="inline-block h-10 w-10 text-blue-600 mr-3" />
+          <h1 className="text-5xl font-black text-slate-900 mb-3">
+            <Timer className="inline-block h-12 w-12 text-blue-600 mr-3" />
             React Seconds Counter
           </h1>
-          <p className="text-slate-600 text-lg">
+          <p className="text-slate-800 text-xl font-semibold">
             Simple counter demonstrating React hooks
           </p>
         </header>
@@ -99,11 +99,11 @@ export default function SimpleCounter() {
         {/* React Concepts Section */}
         <section className="mt-12 mb-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">
-              <Hourglass className="inline-block h-8 w-8 text-blue-600 mr-3" />
+            <h2 className="text-4xl font-black text-slate-900 mb-5">
+              <Hourglass className="inline-block h-10 w-10 text-blue-600 mr-3" />
               Conceptos de React - Hooks useState y useEffect
             </h2>
-            <p className="text-slate-600 text-lg max-w-3xl mx-auto">
+            <p className="text-slate-800 text-xl font-semibold max-w-3xl mx-auto">
               Aprende cómo funcionan los hooks principales de React en este contador de segundos
             </p>
             <div className="inline-flex items-center gap-3 mt-4 bg-slate-50 px-6 py-3 rounded-lg border border-slate-200">
@@ -114,7 +114,7 @@ export default function SimpleCounter() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="text-slate-700 text-sm font-medium">Patsy explica: "¡Caos con patitas pero código limpio!"</span>
+              <span className="text-slate-800 text-base font-bold">Patsy explica: "¡Caos con patitas pero código limpio!"</span>
             </div>
           </div>
 
@@ -124,32 +124,32 @@ export default function SimpleCounter() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg font-bold text-slate-800">
+                <CardTitle className="text-xl font-black text-slate-900">
                   useState Hook
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-slate-800 text-base font-semibold mb-4">
                   Maneja el estado del componente:
                 </p>
-                <ul className="text-slate-600 text-sm space-y-1 list-disc pl-5">
-                  <li><code className="bg-slate-100 px-1 rounded">seconds</code> - contador actual</li>
-                  <li><code className="bg-slate-100 px-1 rounded">isRunning</code> - estado del timer</li>
+                <ul className="text-slate-800 text-base font-medium space-y-2 list-disc pl-6">
+                  <li><code className="bg-slate-200 px-2 py-1 rounded font-bold">seconds</code> - contador actual</li>
+                  <li><code className="bg-slate-200 px-2 py-1 rounded font-bold">isRunning</code> - estado del timer</li>
                 </ul>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg font-bold text-slate-800">
+                <CardTitle className="text-xl font-black text-slate-900">
                   useEffect Hook
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600 text-sm mb-3">
+                <p className="text-slate-800 text-base font-semibold mb-4">
                   Maneja efectos secundarios:
                 </p>
-                <ul className="text-slate-600 text-sm space-y-1 list-disc pl-5">
+                <ul className="text-slate-800 text-base font-medium space-y-2 list-disc pl-6">
                   <li>Inicia/detiene el interval</li>
                   <li>Limpia recursos al desmontar</li>
                 </ul>
@@ -161,7 +161,7 @@ export default function SimpleCounter() {
         {/* Footer */}
         <footer className="mt-12 text-center text-slate-500 text-sm">
           <div className="border-t border-slate-200 pt-6">
-            <p className="mb-4">Built with React and modern web technologies</p>
+            <p className="mb-6 text-slate-800 text-lg font-semibold">Built with React and modern web technologies</p>
             
             {/* Technology Icons - Larger and Stronger Colors */}
             <div className="flex justify-center items-center gap-12 mb-8">
