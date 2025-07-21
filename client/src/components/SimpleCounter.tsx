@@ -118,37 +118,7 @@ export default function SimpleCounter() {
             </div>
           </div>
 
-          {/* Code Example */}
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle className="text-lg font-bold text-slate-800 flex items-center">
-                <Code className="h-5 w-5 text-blue-600 mr-2" />
-                Código Principal
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
-                <pre className="text-green-400 text-sm">
-                  <code>{`const [seconds, setSeconds] = useState(0);
-const [isRunning, setIsRunning] = useState(false);
 
-useEffect(() => {
-  let interval = null;
-  
-  if (isRunning) {
-    interval = setInterval(() => {
-      setSeconds(prevSeconds => prevSeconds + 1);
-    }, 1000);
-  }
-
-  return () => {
-    if (interval) clearInterval(interval);
-  };
-}, [isRunning]);`}</code>
-                </pre>
-              </div>
-            </CardContent>
-          </Card>
 
           {/* React Hooks Explanation */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
