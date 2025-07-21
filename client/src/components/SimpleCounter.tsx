@@ -181,29 +181,40 @@ export default function SimpleCounter() {
               </div>
             </div>
             
-            {/* Bottom Footer Section */}
-            <div className="flex justify-center items-center gap-6 flex-wrap">
-              {/* GitHub Ready Banner */}
+            {/* GitHub Ready Banner */}
+            <div className="flex justify-center mb-8">
               <div className="inline-flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-full border border-slate-200">
                 <SiGithub className="h-4 w-4 text-slate-600" />
                 <span className="text-slate-700 font-medium">Ready for GitHub!</span>
               </div>
-              
-              {/* Patsy Profile - Compact */}
-              <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">
-                <div className="w-16 h-12">
-                  <img 
-                    src={patsyImage} 
-                    alt="Patsy The Pug" 
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div className="text-left">
-                  <p className="text-sm font-bold text-slate-800">Patsy The Pug_dev</p>
-                  <p className="text-xs text-slate-600">Mini dev en educación</p>
-                </div>
-              </div>
             </div>
+
+            {/* Patsy Profile Card - Full */}
+            <Card className="max-w-md mx-auto bg-white border-slate-300 shadow-lg">
+              <CardContent className="p-6">
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-slate-300 shadow-md">
+                    <img 
+                      src={patsyImage} 
+                      alt="Patsy The Pug" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-black text-slate-800 text-xl mb-2">Patsy The Pug_dev</h3>
+                    <p className="text-slate-600 text-sm font-semibold mb-3">@PatsyThePug</p>
+                    <p className="text-slate-700 text-sm leading-relaxed mb-4">
+                      Patsy Pugnerarian, edición limitada con glitter. Debuggeo emociones, rompo código, duermo en deploy. Mini dev en educación, caos con patitas. 💻
+                    </p>
+                    <div className="flex justify-center gap-4 text-xs text-slate-500 mb-2">
+                      <span>📍 CIUDAD DE MEXICO</span>
+                      <span>🔗 dev en educación</span>
+                    </div>
+                    <p className="text-xs text-slate-400">Joined last month</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </footer>
       </div>
