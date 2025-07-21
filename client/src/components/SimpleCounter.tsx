@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Timer, Play, Square, RefreshCw, Code, Hourglass } from 'lucide-react';
 import { SiReact, SiJavascript, SiTailwindcss, SiVite, SiGithub } from 'react-icons/si';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import patsyImage from '@assets/patsydev_1753131964687.png';
+import patsyImage from '@assets/dev 3_1753127624549.png';
 
 export default function SimpleCounter() {
   const [seconds, setSeconds] = useState(0);
