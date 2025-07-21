@@ -193,23 +193,23 @@ useEffect(() => {
           <div className="border-t border-slate-200 pt-6">
             <p className="mb-4">Built with React and modern web technologies</p>
             
-            {/* Technology Icons */}
-            <div className="flex justify-center items-center gap-8 mb-6">
-              <div className="flex flex-col items-center gap-2 text-blue-600 hover:text-blue-700 transition-all duration-300 hover:scale-110">
-                <SiReact className="h-8 w-8" />
-                <span className="text-xs font-medium">React</span>
+            {/* Technology Icons - Larger and Stronger Colors */}
+            <div className="flex justify-center items-center gap-12 mb-8">
+              <div className="flex flex-col items-center gap-3 text-blue-500 hover:text-blue-400 transition-all duration-300 hover:scale-125 cursor-pointer">
+                <SiReact className="h-16 w-16 drop-shadow-lg" />
+                <span className="text-sm font-bold">React</span>
               </div>
-              <div className="flex flex-col items-center gap-2 text-yellow-500 hover:text-yellow-600 transition-all duration-300 hover:scale-110">
-                <SiJavascript className="h-8 w-8" />
-                <span className="text-xs font-medium">JavaScript</span>
+              <div className="flex flex-col items-center gap-3 text-yellow-400 hover:text-yellow-300 transition-all duration-300 hover:scale-125 cursor-pointer">
+                <SiJavascript className="h-16 w-16 drop-shadow-lg" />
+                <span className="text-sm font-bold">JavaScript</span>
               </div>
-              <div className="flex flex-col items-center gap-2 text-cyan-500 hover:text-cyan-600 transition-all duration-300 hover:scale-110">
-                <SiTailwindcss className="h-8 w-8" />
-                <span className="text-xs font-medium">Tailwind</span>
+              <div className="flex flex-col items-center gap-3 text-cyan-400 hover:text-cyan-300 transition-all duration-300 hover:scale-125 cursor-pointer">
+                <SiTailwindcss className="h-16 w-16 drop-shadow-lg" />
+                <span className="text-sm font-bold">Tailwind</span>
               </div>
-              <div className="flex flex-col items-center gap-2 text-purple-600 hover:text-purple-700 transition-all duration-300 hover:scale-110">
-                <SiVite className="h-8 w-8" />
-                <span className="text-xs font-medium">Vite</span>
+              <div className="flex flex-col items-center gap-3 text-purple-500 hover:text-purple-400 transition-all duration-300 hover:scale-125 cursor-pointer">
+                <SiVite className="h-16 w-16 drop-shadow-lg" />
+                <span className="text-sm font-bold">Vite</span>
               </div>
             </div>
             
