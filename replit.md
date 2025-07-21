@@ -15,8 +15,8 @@ Preferred communication style: Simple, everyday language.
 ✓ Enhanced footer with technology badges (React, TypeScript, Tailwind CSS, Vite)
 ✓ Removed PostgreSQL dependency as requested - simplified to in-memory storage
 ✓ Added GitHub-ready banner and improved visual presentation
-✓ Created comprehensive README.md with Spanish documentation
-✓ Added MIT LICENSE file for open source distribution
+✓ Created simplified README.md in Spanish with essential information
+✓ Simplified project files for clean GitHub repository
 ✓ Updated .gitignore with comprehensive patterns for Node.js projects
 ✓ Repositioned Patsy profile to bottom footer with complete GitHub-style card
 ✓ Updated profile text to "Mini dev en educación" for educational focus

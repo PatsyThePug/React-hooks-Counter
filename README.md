@@ -1,138 +1,52 @@
 # React Seconds Counter
 
-A simple and educational React counter application demonstrating fundamental React hooks. Perfect for learning React concepts with hands-on examples and clean, readable code.
+Un contador educativo de React que demuestra los hooks fundamentales. Perfecto para aprender React con ejemplos prácticos y código limpio.
 
-## 🚀 Features
+## ✨ Características
 
-### Simple Counter Functionality
-- **Basic Timer**: Clean seconds counter with start/stop/reset controls
-- **Visual Display**: Large, easy-to-read timer format (MM:SS)
-- **Interactive Controls**: Simple buttons for timer management
-- **Responsive Design**: Works on desktop and mobile devices
+- **Contador Simple**: Cronómetro con controles start/stop/reset  
+- **React Hooks**: Ejemplos reales de `useState` y `useEffect`
+- **Diseño Responsivo**: Funciona en escritorio y móvil
+- **Código Educativo**: Comentado y fácil de entender
 
-### Educational Content
-- **React Hooks Demo**: Real-world examples of `useState` and `useEffect`
-- **Clean Code**: Well-commented, beginner-friendly code structure
-- **Learning Focus**: Demonstrates core React concepts without complexity
-- **Code Examples**: Live code snippets showing hook implementation
+## 🛠️ Tecnologías
 
-## 🛠️ Tech Stack
+- React 18 + TypeScript
+- Tailwind CSS  
+- Vite
+- Shadcn/UI
 
-- **React 18** - Modern React with hooks
-- **TypeScript** - Type-safe JavaScript development
-- **Tailwind CSS** - Utility-first styling
-- **Vite** - Fast build tool and development server
-- **Shadcn/UI** - Beautiful, accessible components
+## 🚀 Instalación
 
-## 🎯 Learning Objectives
-
-This project demonstrates:
-
-1. **useState Hook**: Managing component state for timer values and controls
-2. **useEffect Hook**: Handling side effects like intervals and cleanup
-3. **Component Structure**: Building reusable, maintainable components
-4. **Event Handling**: Implementing user interactions with proper state updates
-5. **Conditional Rendering**: Displaying different UI based on application state
-
-## 🚦 Getting Started
-
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/react-seconds-counter.git
-   cd react-seconds-counter
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open your browser and visit `http://localhost:5000`
-
-## 💻 Core Implementation
-
-### useState Hook Example
-```javascript
-const [seconds, setSeconds] = useState(0);
-const [isRunning, setIsRunning] = useState(false);
+```bash
+git clone [tu-repo]
+cd react-seconds-counter
+npm install
+npm run dev
 ```
 
-### useEffect Hook Example
+## 📝 Código Principal
+
 ```javascript
+// useState para el estado
+const [seconds, setSeconds] = useState(0);
+const [isRunning, setIsRunning] = useState(false);
+
+// useEffect para el timer
 useEffect(() => {
   let interval = null;
-  
   if (isRunning) {
     interval = setInterval(() => {
-      setSeconds(prevSeconds => prevSeconds + 1);
+      setSeconds(prev => prev + 1);
     }, 1000);
   }
-
-  return () => {
-    if (interval) clearInterval(interval);
-  };
+  return () => clearInterval(interval);
 }, [isRunning]);
 ```
 
-## 📁 Project Structure
+## 👩‍💻 Creado por
 
-```
-src/
-├── components/
-│   └── SimpleCounter.tsx    # Main counter component
-├── pages/
-│   └── counter.tsx         # Counter page
-├── App.tsx                 # App router
-└── main.tsx               # Entry point
-```
+**Patsy The Pug_dev**  
+Mini dev en educación - Ciudad de México
 
-## 🎨 Features in Detail
-
-### Timer Controls
-- **Start**: Begin counting seconds
-- **Stop**: Pause the timer
-- **Reset**: Reset counter to 00:00
-
-### Educational Elements
-- **Live Code Examples**: See the actual hooks code in action
-- **Concept Explanations**: Understanding useState and useEffect
-- **Clean Architecture**: Learn from well-structured React components
-
-## 🌟 About the Creator
-
-**Patsy The Pug_dev** - Mini dev en entrenamiento  
-*Patsy Pugnerarian, edición limitada con glitter. Debuggeo emociones, rompo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas.* 💻
-
-Based in Ciudad de México, learning and building with modern web technologies.
-
-
-
-## 🤝 Contributing
-
-Contributions are welcome! This is an educational project perfect for:
-- First-time contributors
-- Learning React fundamentals  
-- Practicing clean code principles
-- Understanding modern development workflow
-
-## 📚 Additional Resources
-
-- [React Documentation](https://reactjs.org/docs/getting-started.html)
-- [React Hooks Guide](https://reactjs.org/docs/hooks-intro.html)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Documentation](https://vitejs.dev/guide/)
-
----
-
-Made with ❤️ for learning React fundamentals
+*Aprendiendo React con código limpio y caos con patitas* 💻
