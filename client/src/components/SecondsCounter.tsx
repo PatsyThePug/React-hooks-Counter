@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Timer, Code, Clock, Play, AlarmClock, Hourglass } from 'lucide-react';
+import { Timer, Code, Clock, Play, AlarmClock, Hourglass, Zap, RefreshCw } from 'lucide-react';
 import { SiReact, SiJavascript, SiTailwindcss, SiVite, SiGithub } from 'react-icons/si';
 import { useCounter } from '@/hooks/useCounter';
 import CounterDisplay from './CounterDisplay';
@@ -101,109 +101,145 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
           />
         </div>
 
-        {/* Timer Concepts Section */}
+        {/* React Concepts Section */}
         <section className="mt-12 mb-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-slate-800 mb-4">
               <Hourglass className="inline-block h-8 w-8 text-blue-600 mr-3" />
-              Conceptos de Tiempo y Cronometraje
+              Conceptos de React - Hooks useState y useEffect
             </h2>
             <p className="text-slate-600 text-lg max-w-3xl mx-auto">
-              Explora los fundamentos del tiempo, cronometraje y medición temporal en aplicaciones web modernas
+              Aprende cómo funcionan los hooks principales de React en este contador de segundos
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="text-center pb-4">
-                <Clock className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-                <CardTitle className="text-lg font-bold text-slate-800">Elapsed Time</CardTitle>
+          {/* React Hooks Concepts */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold text-slate-800 flex items-center">
+                  <Zap className="h-6 w-6 text-blue-600 mr-3" />
+                  El Hook useState
+                </CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  Medición del tiempo transcurrido desde un punto de inicio específico. 
-                  Útil para monitorear duración de procesos y actividades.
+              <CardContent>
+                <p className="text-slate-600 text-sm mb-4">
+                  Permite manejar estado local en componentes funcionales. En este contador se usa para:
+                </p>
+                <ul className="text-slate-600 text-sm space-y-2 list-disc pl-5">
+                  <li><strong>Segundos actuales:</strong> <code className="bg-gray-100 px-1 rounded">const [seconds, setSeconds] = useState(0)</code></li>
+                  <li><strong>Estado running:</strong> <code className="bg-gray-100 px-1 rounded">const [isRunning, setIsRunning] = useState(false)</code></li>
+                  <li><strong>Modo del timer:</strong> <code className="bg-gray-100 px-1 rounded">const [mode, setMode] = useState('elapsed')</code></li>
+                  <li><strong>Alertas:</strong> <code className="bg-gray-100 px-1 rounded">const [alert, setAlert] = useState({})</code></li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold text-slate-800 flex items-center">
+                  <RefreshCw className="h-6 w-6 text-emerald-600 mr-3" />
+                  El Hook useEffect
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600 text-sm mb-4">
+                  Maneja efectos secundarios y el ciclo de vida del componente:
+                </p>
+                <ul className="text-slate-600 text-sm space-y-2 list-disc pl-5">
+                  <li><strong>setInterval():</strong> Inicia el timer cuando el componente se monta</li>
+                  <li><strong>Cleanup:</strong> Limpia intervals al desmontar el componente</li>
+                  <li><strong>Dependencias:</strong> Se ejecuta cuando cambia isRunning, mode, etc.</li>
+                  <li><strong>onLoad:</strong> Cuenta segundos desde que se carga la página</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Key Implementation Features */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold text-slate-800 flex items-center">
+                  <Timer className="h-6 w-6 text-purple-600 mr-3" />
+                  ReactDOM.createRoot()
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600 text-sm mb-4">
+                  API moderna de React 18 para renderizar componentes:
+                </p>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <code className="text-sm text-slate-700">
+                    {`<SecondsCounter seconds={3434} />`}
+                  </code>
+                </div>
+                <p className="text-slate-600 text-xs mt-2">
+                  El componente puede recibir la cantidad de segundos como props para control externo
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="text-center pb-4">
-                <Play className="h-12 w-12 text-emerald-600 mx-auto mb-3" />
-                <CardTitle className="text-lg font-bold text-slate-800">Countdown Timer</CardTitle>
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold text-slate-800 flex items-center">
+                  <Clock className="h-6 w-6 text-blue-600 mr-3" />
+                  setInterval() + onLoad
+                </CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  Cuenta regresiva desde un tiempo establecido hacia cero. 
-                  Perfecto para temporizadores, alarmas y gestión de tiempo.
+              <CardContent>
+                <p className="text-slate-600 text-sm mb-4">
+                  Actualización automática cada segundo desde que se carga la página:
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="text-center pb-4">
-                <AlarmClock className="h-12 w-12 text-amber-600 mx-auto mb-3" />
-                <CardTitle className="text-lg font-bold text-slate-800">Alert System</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  Notificaciones automáticas cuando se alcanzan tiempos específicos. 
-                  Combina alertas visuales y sonoras para máxima efectividad.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="text-center pb-4">
-                <Timer className="h-12 w-12 text-purple-600 mx-auto mb-3" />
-                <CardTitle className="text-lg font-bold text-slate-800">Precision Timing</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  Sincronización precisa usando setInterval() y timestamps. 
-                  Manejo robusto de pausas y reanudaciones sin perder precisión.
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <code className="text-sm text-slate-700">
+                    setInterval(() =&gt; {"{"}setSeconds(s =&gt; s + 1){"}"}, 1000)
+                  </code>
+                </div>
+                <p className="text-slate-600 text-xs mt-2">
+                  Re-renderiza el componente cada segundo para mostrar tiempo transcurrido
                 </p>
               </CardContent>
             </Card>
           </div>
 
-          {/* Technical Implementation Details */}
+          {/* Additional Features */}
           <Card className="shadow-lg">
             <CardHeader>
               <CardTitle className="text-xl font-bold text-slate-800 flex items-center">
                 <Code className="h-6 w-6 text-slate-600 mr-3" />
-                Implementación Técnica
+                Funciones del Contador
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="bg-blue-100 rounded-full p-4 mb-4 inline-block">
-                    <span className="text-2xl font-mono font-bold text-blue-700">setInterval()</span>
-                  </div>
-                  <h4 className="font-semibold text-slate-800 mb-2">Actualización Periódica</h4>
-                  <p className="text-slate-600 text-sm">
-                    Ejecuta funciones cada segundo para actualizar el contador con precisión milimétrica
-                  </p>
-                </div>
-                
-                <div className="text-center">
                   <div className="bg-emerald-100 rounded-full p-4 mb-4 inline-block">
-                    <span className="text-2xl font-mono font-bold text-emerald-700">Date.now()</span>
+                    <Play className="h-8 w-8 text-emerald-700" />
                   </div>
-                  <h4 className="font-semibold text-slate-800 mb-2">Timestamps Precisos</h4>
+                  <h4 className="font-semibold text-slate-800 mb-2">Cuenta Regresiva</h4>
                   <p className="text-slate-600 text-sm">
-                    Utiliza timestamps del sistema para cálculos precisos independientes de la velocidad del navegador
+                    Crear opción de countdown desde un número dado con funciones de control
                   </p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="bg-yellow-100 rounded-full p-4 mb-4 inline-block">
-                    <span className="text-2xl font-mono font-bold text-yellow-700">addEventListener()</span>
+                  <div className="bg-blue-100 rounded-full p-4 mb-4 inline-block">
+                    <RefreshCw className="h-8 w-8 text-blue-700" />
                   </div>
-                  <h4 className="font-semibold text-slate-800 mb-2">Gestión de Eventos</h4>
+                  <h4 className="font-semibold text-slate-800 mb-2">Controles</h4>
                   <p className="text-slate-600 text-sm">
-                    Maneja eventos del navegador y ciclo de vida para una experiencia interactiva fluida
+                    Funciones de parar, reiniciar y resumir el contador con useState
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="bg-amber-100 rounded-full p-4 mb-4 inline-block">
+                    <AlarmClock className="h-8 w-8 text-amber-700" />
+                  </div>
+                  <h4 className="font-semibold text-slate-800 mb-2">Alertas</h4>
+                  <p className="text-slate-600 text-sm">
+                    Alerta cuando se llega a un tiempo específico que ingresa el usuario
                   </p>
                 </div>
               </div>
