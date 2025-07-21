@@ -200,7 +200,7 @@ export default function SimpleCounter() {
                 </div>
                 <div className="text-left">
                   <p className="text-sm font-bold text-slate-800">Patsy The Pug_dev</p>
-                  <p className="text-xs text-slate-600">Mini dev en entrenamiento</p>
+                  <p className="text-xs text-slate-600">Mini dev en educación</p>
                 </div>
               </div>
             </div>
