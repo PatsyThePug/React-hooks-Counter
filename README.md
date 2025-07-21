@@ -6,7 +6,6 @@ Una aplicación avanzada de contador de segundos construida con React y tecnolog
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ## ✨ Características
 
@@ -32,9 +31,8 @@ Una aplicación avanzada de contador de segundos construida con React y tecnolog
 
 ### Backend
 - **Express.js** con TypeScript para APIs robustas
-- **PostgreSQL** con Drizzle ORM para operaciones de base de datos type-safe
-- **Neon Database** para PostgreSQL serverless
-- **Session Management** con almacenamiento en PostgreSQL
+- **In-Memory Storage** para almacenamiento ligero y rápido
+- **Session Management** con memoria para desarrollo
 
 ### DevOps y Herramientas
 - **Hot Reloading** con Vite y tsx
@@ -46,7 +44,6 @@ Una aplicación avanzada de contador de segundos construida con React y tecnolog
 ### Prerrequisitos
 - Node.js 18+ 
 - npm o yarn
-- PostgreSQL database (opcional para desarrollo local)
 
 ### Configuración Local
 
@@ -61,18 +58,12 @@ Una aplicación avanzada de contador de segundos construida con React y tecnolog
    npm install
    ```
 
-3. **Configura las variables de entorno** (opcional)
-   ```bash
-   # Para usar base de datos PostgreSQL
-   DATABASE_URL=postgresql://username:password@localhost:5432/counter_app
-   ```
-
-4. **Ejecuta la aplicación en modo desarrollo**
+3. **Ejecuta la aplicación en modo desarrollo**
    ```bash
    npm run dev
    ```
 
-5. **Abre tu navegador**
+4. **Abre tu navegador**
    ```
    http://localhost:5000
    ```
@@ -127,8 +118,7 @@ Una aplicación avanzada de contador de segundos construida con React y tecnolog
 - `npm run dev` - Inicia desarrollo con hot reloading
 - `npm run build` - Construye la aplicación para producción
 - `npm run preview` - Preview de la build de producción
-- `npm run db:generate` - Genera migraciones de base de datos
-- `npm run db:migrate` - Ejecuta migraciones de base de datos
+
 
 ## 🎯 Características Técnicas Destacadas
 
@@ -143,9 +133,9 @@ Una aplicación avanzada de contador de segundos construida con React y tecnolog
 - Prevención de alertas duplicadas con referencias
 
 ### Persistencia de Datos
-- Estadísticas de sesión en tiempo real
-- Integración lista para base de datos PostgreSQL
-- Session management para persistencia entre recargas
+- Estadísticas de sesión en tiempo real en memoria
+- Almacenamiento ligero para desarrollo
+- Estado persistente durante la sesión de la aplicación
 
 ### Arquitectura Escalable
 - Separación clara entre cliente y servidor

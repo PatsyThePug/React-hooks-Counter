@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Timer, Code } from 'lucide-react';
-import { SiReact, SiTypescript, SiTailwindcss, SiVite, SiPostgresql, SiGithub } from 'react-icons/si';
+import { SiReact, SiTypescript, SiTailwindcss, SiVite, SiGithub } from 'react-icons/si';
 import { useCounter } from '@/hooks/useCounter';
 import CounterDisplay from './CounterDisplay';
 import SettingsPanel from './SettingsPanel';
@@ -106,7 +106,7 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
             <p className="mb-4">Built with React and modern web technologies</p>
             
             {/* Technology Icons */}
-            <div className="flex justify-center items-center gap-6 mb-4">
+            <div className="flex justify-center items-center gap-8 mb-4">
               <div className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors">
                 <SiReact className="h-5 w-5" />
                 <span className="text-xs font-medium">React</span>
@@ -122,10 +122,6 @@ export default function SecondsCounter({ seconds: propSeconds }: SecondsCounterP
               <div className="flex items-center gap-2 text-purple-600 hover:text-purple-700 transition-colors">
                 <SiVite className="h-5 w-5" />
                 <span className="text-xs font-medium">Vite</span>
-              </div>
-              <div className="flex items-center gap-2 text-blue-800 hover:text-blue-900 transition-colors">
-                <SiPostgresql className="h-5 w-5" />
-                <span className="text-xs font-medium">PostgreSQL</span>
               </div>
             </div>
             
