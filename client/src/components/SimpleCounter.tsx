@@ -201,14 +201,14 @@ export default function SimpleCounter() {
                     />
                   </div>
                   <div>
-                    <h3 className="font-black text-slate-800 text-xl mb-2">@PatsyThePug</h3>
+                    <h3 className="font-black text-slate-800 text-xl mb-2">Patsy The Pug_dev</h3>
                     <p className="text-slate-600 text-sm font-semibold mb-3">@PatsyThePug</p>
                     <p className="text-slate-700 text-sm leading-relaxed mb-4">
                       Patsy Pugnerarian, edición limitada con glitter. Debuggeo emociones, rompo código, duermo en deploy. Mini dev en educación, caos con patitas. 💻
                     </p>
                     <div className="flex justify-center gap-4 text-xs text-slate-500 mb-2">
                       <span>📍 CIUDAD DE MEXICO</span>
-                      <span>🔗 dev en educación</span>
+                      <span>🔗 github.com/PatsyThePug</span>
                     </div>
                     <p className="text-xs text-slate-400">Joined last month</p>
                   </div>

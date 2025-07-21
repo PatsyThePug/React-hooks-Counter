@@ -46,7 +46,8 @@ useEffect(() => {
 
 ## 👩‍💻 Creado por
 
-**@PatsyThePug**  
+**Patsy The Pug_dev**  
+GitHub: https://github.com/PatsyThePug  
 Mini dev en educación - Ciudad de México
 
 *Aprendiendo React con código limpio y caos con patitas* 💻
