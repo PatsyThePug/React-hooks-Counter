@@ -48,9 +48,7 @@ export default function SimpleCounter() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 mb-2">Aprendiendo con Patsy The Pug_dev</h2>
-            <p className="text-base text-slate-700 font-semibold mb-3">Patsy Pugnerarian • she/her</p>
-            <p className="text-sm text-slate-800 font-medium max-w-xs mx-auto">Patsy Pugnerarian, edición limitada con glitter. Debuggeo emociones, rompo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas. 💻</p>
+            <h2 className="text-2xl font-black text-slate-900 mb-2">aprendiendo con patsy</h2>
           </div>
           <h1 className="text-5xl font-black text-slate-900 mb-3">
             <Timer className="inline-block h-12 w-12 text-blue-600 mr-3" />
@@ -114,7 +112,7 @@ export default function SimpleCounter() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="text-slate-800 text-base font-bold">Patsy explica: "¡Caos con patitas pero código limpio!"</span>
+              <span className="text-slate-800 text-base font-bold">¡Caos con patitas pero código limpio!</span>
             </div>
           </div>
 
