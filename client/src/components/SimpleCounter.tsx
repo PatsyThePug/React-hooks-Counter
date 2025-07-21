@@ -197,19 +197,19 @@ useEffect(() => {
             <div className="flex justify-center items-center gap-12 mb-8">
               <div className="flex flex-col items-center gap-3 text-blue-500 hover:text-blue-400 transition-all duration-300 hover:scale-125 cursor-pointer">
                 <SiReact className="h-16 w-16 drop-shadow-lg" />
-                <span className="text-sm font-bold">React</span>
+                <span className="text-lg font-black text-slate-800">React</span>
               </div>
               <div className="flex flex-col items-center gap-3 text-yellow-400 hover:text-yellow-300 transition-all duration-300 hover:scale-125 cursor-pointer">
                 <SiJavascript className="h-16 w-16 drop-shadow-lg" />
-                <span className="text-sm font-bold">JavaScript</span>
+                <span className="text-lg font-black text-slate-800">JavaScript</span>
               </div>
               <div className="flex flex-col items-center gap-3 text-cyan-400 hover:text-cyan-300 transition-all duration-300 hover:scale-125 cursor-pointer">
                 <SiTailwindcss className="h-16 w-16 drop-shadow-lg" />
-                <span className="text-sm font-bold">Tailwind</span>
+                <span className="text-lg font-black text-slate-800">Tailwind</span>
               </div>
               <div className="flex flex-col items-center gap-3 text-purple-500 hover:text-purple-400 transition-all duration-300 hover:scale-125 cursor-pointer">
                 <SiVite className="h-16 w-16 drop-shadow-lg" />
-                <span className="text-sm font-bold">Vite</span>
+                <span className="text-lg font-black text-slate-800">Vite</span>
               </div>
             </div>
             
