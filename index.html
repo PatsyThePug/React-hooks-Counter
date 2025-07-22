@@ -13,22 +13,45 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #ffffff;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 20px;
             color: #333;
         }
         
         .container {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
-            max-width: 500px;
-            width: 90%;
+        }
+        
+        .profile-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            background: #f8f9fa;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #ff6b6b, #ffa500);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+        }
+        
+        .counter-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 20px 0;
         }
         
         .header {
@@ -127,6 +150,28 @@
             color: #dc3545;
         }
         
+        .concepts-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            text-align: left;
+        }
+        
+        .concepts-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .concept-item {
+            margin: 15px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
         .footer {
             margin-top: 2rem;
             padding-top: 1rem;
@@ -138,23 +183,59 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1 class="brand">Aprendiendo con Patsy</h1>
-            <p class="author">Creado por <a href="https://github.com/patsydev" target="_blank">Patsy The Pug_dev</a></p>
+        <!-- Sección del Perfil de Patsy -->
+        <div class="profile-section">
+            <div class="profile-image">🐶</div>
+            <h1 class="brand">Patsy The Pug_dev</h1>
+            <p class="author">Desarrolladora Full Stack - Especialista en JavaScript</p>
+            <p style="margin-top: 10px; font-style: italic;">"Aprendiendo con patitas pero código limpio"</p>
         </div>
         
-        <div class="counter-display" id="counter">0</div>
-        
-        <div class="controls">
-            <button class="btn btn-start" id="startBtn">Iniciar</button>
-            <button class="btn btn-stop" id="stopBtn">Detener</button>
-            <button class="btn btn-reset" id="resetBtn">Reiniciar</button>
+        <!-- Sección del Contador -->
+        <div class="counter-section">
+            <h2>Contador de Segundos Educativo</h2>
+            <div class="counter-display" id="counter">0</div>
+            
+            <div class="controls">
+                <button class="btn btn-start" id="startBtn">Iniciar</button>
+                <button class="btn btn-stop" id="stopBtn">Detener</button>
+                <button class="btn btn-reset" id="resetBtn">Reiniciar</button>
+            </div>
+            
+            <div class="status" id="status">Listo para empezar</div>
         </div>
         
-        <div class="status" id="status">Listo para empezar</div>
+        <!-- Sección de Conceptos Educativos -->
+        <div class="concepts-section">
+            <h2>📚 Conceptos de JavaScript Demostrados</h2>
+            
+            <div class="concept-item">
+                <strong>🎯 Manejo del DOM:</strong> Selección y manipulación de elementos HTML usando getElementById()
+            </div>
+            
+            <div class="concept-item">
+                <strong>⚡ Eventos:</strong> addEventListener() para manejar clicks de botones
+            </div>
+            
+            <div class="concept-item">
+                <strong>⏰ Temporizadores:</strong> setInterval() y clearInterval() para controlar el tiempo
+            </div>
+            
+            <div class="concept-item">
+                <strong>🏗️ Clases ES6:</strong> Organización del código usando class y métodos
+            </div>
+            
+            <div class="concept-item">
+                <strong>🔄 Estados:</strong> Control de variables (isRunning, seconds) para manejar el estado de la aplicación
+            </div>
+            
+            <div class="concept-item">
+                <strong>🎨 CSS Moderno:</strong> Flexbox, gradientes, transiciones y responsive design
+            </div>
+        </div>
         
         <div class="footer">
-            <p>Contador de segundos educativo - JavaScript Vanilla</p>
+            <p>Proyecto educativo - JavaScript Vanilla sin dependencias externas</p>
             <p>© 2025 Patsy The Pug_dev - Código 100% original</p>
         </div>
     </div>
