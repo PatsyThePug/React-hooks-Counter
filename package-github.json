@@ -2,6 +2,8 @@
   "name": "react-seconds-counter",
   "version": "1.0.0",
   "type": "module",
+  "author": "Patsy The Pug_dev",
+  "description": "Contador educativo de React - Código propio",
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",

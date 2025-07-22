@@ -33,7 +33,9 @@ useEffect(() => {
 }, [isRunning]);
 ```
 
-## 👩‍💻 Por
+## 👩‍💻 Propietaria y Creadora
 
-**Patsy The Pug_dev**  
-https://github.com/PatsyThePug
+**Patsy The Pug_dev** - Código 100% propio  
+https://github.com/PatsyThePug  
+
+*Todo el código en este repositorio es de mi propiedad y creación.*
