@@ -74,7 +74,6 @@ Critical feedback: EXTREMELY frustrated with time wasted due to lack of proper b
 ### Static Hosting Requirements
 - **No Build Process**: Direct deployment of `index.html`
 - **No Server Required**: Pure client-side application
-- **No Dependencies**: Self-contained single file
 - **Static Site Configuration**: Deployment type should be "static"
 
 ### Current Deployment Issue
@@ -82,11 +81,25 @@ Critical feedback: EXTREMELY frustrated with time wasted due to lack of proper b
 - **Solution**: Change deployment type from "autoscale" to "static"
 - **Remove**: Build commands, run commands, port configuration, environment variables
 
+### Required Manual Changes in Replit Interface
+Since the `.replit` file cannot be edited programmatically, these changes must be made through the Replit interface:
+
+1. **Change Deployment Target**: Set `deploymentTarget = "static"`
+2. **Remove Build Command**: Delete `build = ["npm", "run", "build"]`
+3. **Remove Run Command**: Delete `run = ["npm", "run", "start"]` 
+4. **Remove Port Configuration**: Delete all `[[ports]]` sections
+5. **Remove Environment Variables**: Delete `[env]` section
+
 ### Correct Deployment Settings
 ```toml
 [deployment]
 deploymentTarget = "static"
 ```
+
+### Project Structure
+- **Main File**: `index.html` (self-contained timer application)
+- **Development Setup**: React/Vite for future enhancements
+- **Current State**: Vanilla JavaScript timer with complete functionality
 
 ## Current Status (Latest Session - July 22, 2025)
 
