@@ -4,7 +4,7 @@ Contador educativo de React con hooks básicos.
 
 ## 🚀 Para GitHub
 
-1. Renombra `package-github.json` a `package.json`
+1. Renombra `package-clean.json` a `package.json`
 2. Sube los archivos:
 
 ```bash
