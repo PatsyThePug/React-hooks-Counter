@@ -27,5 +27,27 @@ Inspirado por **Patsy The Pug_dev**, edición limitada con glitter 💖🐾.
    ```bash
    git clone https://github.com/PatsyThePug/React-hooks-Counter.git
    cd React-hooks-Counter
+Instala las dependencias:
+
+npm install
+
+Inicia el servidor de desarrollo:
+
+    npm run dev
+
+📸 Vista previa
+
+🐾 Sobre Patsy The Pug
+
+    Patsy Pugneranian, edición limitada con glitter. Debuggeo emociones, rompo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas. 🐾🖥️
+
+✨ Créditos
+
+    💻 Código y diseño por Alejandra Bárcena
+
+    🐶 Protagonizado por Patsy The Pug_dev
+
+    🎨 Ilustración original incluida en la interfaz
+
 
 
