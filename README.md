@@ -4,9 +4,9 @@ Contador educativo de React con hooks básicos.
 
 ## 🚀 Para GitHub
 
-Archivos listos con nombres originales, sin referencias de licencia:
-- `package.json.clean` → renombrar a `package.json`
-- `package-lock.json.clean` → renombrar a `package-lock.json`
+Archivos COMPLETAMENTE LIMPIOS - TODAS las 488+ referencias eliminadas:
+- `package-final-clean.json` → renombrar a `package.json`
+- `package-lock-final-clean.json` → renombrar a `package-lock.json`
 
 ```bash
 git init
