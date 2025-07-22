@@ -16,8 +16,11 @@ Critical feedback: EXTREMELY frustrated with time wasted due to lack of proper b
 - GitHub profile: Information should be placed NEXT TO photo, not below
 - Profile bio: Complete text "Patsy Pugneranian, edición limitada con glitter. Debuggeo emociones, rompo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas. 💻"
 - NO duplicate information in profile sections
-- Footer technology icons: Simple emojis (⚛️ React, 🟨 JavaScript, 🔷 CSS3, ⚡ Vite)
-- User preference: Simple emojis work better than complex SVG icons for footer
+- **ALL ICONS: Use simple emojis, NO complex SVG icons**
+- Footer technology icons: ⚛️ React, 🟨 JavaScript, 🔷 CSS3, ⚡ Vite
+- Section icons: ⚙️ Settings, ⏰ Timer, 🔔 Alerts, 📊 Stats, 📚 Education
+- Function icons: ▶️ Play, 🎮 Controls, 🚨 Alerts
+- **CRITICAL**: Simple emojis prevent licensing issues and time waste
 
 ## System Architecture
 
@@ -100,8 +103,10 @@ Eliminar: build, run, ports, env.
 
 ### User Feedback:
 - Footer emoji icons: "NO PERFECTOS PERO MEJOR" - acceptable solution
-- User prefers simple emojis over complex SVG icons for footer
-- Layout adjustments successful
+- ALL sections now use simple emojis instead of SVG icons
+- User frustrated with time/money lost due to SVG licensing complexity
+- "ES QUE SI LO HICIERON BIEN PERO NO ESTABA DOCUMENTADO" - solution works but wasn't documented
+- **SOLUTION**: Simple emojis prevent licensing issues and save time
 - NO MORE TIME SHOULD BE WASTED on repeated implementations
 
 ## Project Ownership
