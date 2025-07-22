@@ -1,19 +1,34 @@
 # Propiedad del Código
 
-Este proyecto es **100% propiedad** de **Patsy The Pug_dev**.
+## Propietaria
+
+**Patsy The Pug_dev**
+- GitHub: https://github.com/patsydev
+- Proyecto: "Aprendiendo con Patsy"
 
 ## Declaración de Propiedad
 
-- Todo el código fuente es de mi creación
-- Todas las decisiones de diseño son mías
-- El concepto y implementación son propios
-- No hay restricciones de licencias externas
+Este proyecto y todo su código son **100% propiedad original** de Patsy The Pug_dev.
 
-## Contacto
+- ✅ Todo el código JavaScript es original
+- ✅ Todo el CSS es original  
+- ✅ Todo el HTML es original
+- ✅ Sin dependencias externas
+- ✅ Sin código de terceros
+- ✅ Sin bibliotecas externas
 
-**Propietaria:** Patsy The Pug_dev  
-**GitHub:** https://github.com/PatsyThePug  
-**Proyecto:** React Seconds Counter - Aprendiendo con Patsy
+## Sin Derechos de Autor de Terceros
 
----
-*Código creado con 💻 y mucho café*
+Este proyecto está completamente libre de:
+- Frameworks externos
+- Bibliotecas de terceros
+- Código con licencias externas
+- Dependencias npm con derechos de autor ajenos
+
+## Tecnologías Utilizadas
+
+- **JavaScript Puro** (Vanilla JS) - Sin frameworks
+- **CSS3** - Estilos originales
+- **HTML5** - Estructura semántica
+
+Todo desarrollado desde cero por Patsy The Pug_dev como material educativo.

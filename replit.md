@@ -1,8 +1,8 @@
-# React Seconds Counter - Replit Project Guide
+# Contador de Segundos Vanilla JS - Proyecto Limpio
 
 ## Overview
 
-This is a React-based seconds counter application owned by **Patsy The Pug_dev**. It's an educational project demonstrating React component creation, state management, and modern frontend development practices. The application features a simple counter interface with start, stop, and reset functionality, built with modern React patterns and styled with Tailwind CSS and shadcn/ui components.
+Este es un contador de segundos educativo creado con **JavaScript puro** por **Patsy The Pug_dev**. Es un proyecto 100% libre de derechos de autor de terceros, sin frameworks ni dependencias externas. Demuestra conceptos básicos de JavaScript: DOM, eventos, temporizadores y clases ES6.
 
 ## User Preferences
 

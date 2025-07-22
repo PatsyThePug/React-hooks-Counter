@@ -1,5 +1,14 @@
-node_modules/
-dist/
-.env*
+# Archivos temporales
+*.tmp
+*.temp
 .DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
 *.log

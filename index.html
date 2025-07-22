@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Segundos - Aprendiendo con Patsy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        .header {
+            margin-bottom: 2rem;
+        }
+        
+        .brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .author {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .author a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .counter-display {
+            font-size: 4rem;
+            font-weight: 300;
+            color: #333;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border: 3px solid #e9ecef;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 100px;
+        }
+        
+        .btn-start {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-start:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        
+        .btn-stop {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn-stop:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+        }
+        
+        .btn-reset {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-reset:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+        
+        .status {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        
+        .running {
+            color: #28a745;
+        }
+        
+        .stopped {
+            color: #dc3545;
+        }
+        
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e9ecef;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="brand">Aprendiendo con Patsy</h1>
+            <p class="author">Creado por <a href="https://github.com/patsydev" target="_blank">Patsy The Pug_dev</a></p>
+        </div>
+        
+        <div class="counter-display" id="counter">0</div>
+        
+        <div class="controls">
+            <button class="btn btn-start" id="startBtn">Iniciar</button>
+            <button class="btn btn-stop" id="stopBtn">Parar</button>
+            <button class="btn btn-reset" id="resetBtn">Reiniciar</button>
+        </div>
+        
+        <div class="status" id="status">Listo para empezar</div>
+        
+        <div class="footer">
+            <p>Contador de segundos educativo - JavaScript Vanilla</p>
+            <p>© 2025 Patsy The Pug_dev - Código 100% original</p>
+        </div>
+    </div>
+
+    <script>
+        // Contador de Segundos - Código 100% Original por Patsy The Pug_dev
+        class SecondCounter {
+            constructor() {
+                this.seconds = 0;
+                this.interval = null;
+                this.isRunning = false;
+                this.initElements();
+                this.bindEvents();
+            }
+            
+            initElements() {
+                this.counterEl = document.getElementById('counter');
+                this.statusEl = document.getElementById('status');
+                this.startBtn = document.getElementById('startBtn');
+                this.stopBtn = document.getElementById('stopBtn');
+                this.resetBtn = document.getElementById('resetBtn');
+            }
+            
+            bindEvents() {
+                this.startBtn.addEventListener('click', () => this.start());
+                this.stopBtn.addEventListener('click', () => this.stop());
+                this.resetBtn.addEventListener('click', () => this.reset());
+            }
+            
+            start() {
+                if (!this.isRunning) {
+                    this.isRunning = true;
+                    this.interval = setInterval(() => {
+                        this.seconds++;
+                        this.updateDisplay();
+                    }, 1000);
+                    this.updateStatus('Contando...', 'running');
+                }
+            }
+            
+            stop() {
+                if (this.isRunning) {
+                    this.isRunning = false;
+                    clearInterval(this.interval);
+                    this.updateStatus('Detenido', 'stopped');
+                }
+            }
+            
+            reset() {
+                this.stop();
+                this.seconds = 0;
+                this.updateDisplay();
+                this.updateStatus('Listo para empezar', '');
+            }
+            
+            updateDisplay() {
+                this.counterEl.textContent = this.seconds;
+            }
+            
+            updateStatus(text, className) {
+                this.statusEl.textContent = text;
+                this.statusEl.className = 'status ' + className;
+            }
+        }
+        
+        // Inicializar cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', () => {
+            new SecondCounter();
+        });
+    </script>
+</body>
+</html>
