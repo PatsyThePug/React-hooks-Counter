@@ -140,11 +140,6 @@
             opacity: 0.9;
         }
         
-        .btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-        
         .settings-panel {
             flex: 1;
             background: white;
@@ -160,20 +155,10 @@
             border-bottom: 1px solid #e5e7eb;
         }
         
-        .setting-group:last-child {
-            border-bottom: none;
-        }
-        
         .setting-group h3 {
             font-size: 1rem;
             color: #333;
             margin-bottom: 10px;
-        }
-        
-        .radio-group label {
-            display: block;
-            margin: 8px 0;
-            cursor: pointer;
         }
         
         .educational-section {
@@ -188,12 +173,6 @@
             color: #333;
             font-size: 1.8rem;
             margin-bottom: 10px;
-        }
-        
-        .educational-section > p {
-            text-align: center;
-            color: #666;
-            margin-bottom: 40px;
         }
         
         .concepts-grid {
@@ -214,24 +193,6 @@
             margin-bottom: 15px;
         }
         
-        .concept-card p {
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-        
-        .concept-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .concept-card li {
-            margin: 8px 0;
-            padding: 5px 0;
-            font-size: 0.9rem;
-            color: #666;
-        }
-        
         .tech-icons {
             display: flex;
             justify-content: center;
@@ -246,24 +207,10 @@
             font-size: 0.85rem;
             color: #374151;
         }
-        
-        @media (max-width: 768px) {
-            .main-container {
-                flex-direction: column;
-            }
-            
-            .concepts-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .time {
-                font-size: 2.5rem;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="app">
+    <div id="app">
         <div class="header">
             <div class="logo">
                 <img src="https://via.placeholder.com/60x60/FF6B35/FFFFFF?text=P" alt="Patsy Logo" />
@@ -294,8 +241,8 @@
             <div class="settings-panel">
                 <div class="setting-group">
                     <h3>⚙️ Counter Mode</h3>
-                    <div class="radio-group">
-                        <label><input type="radio" checked> Count Up</label>
+                    <div>
+                        <label><input type="radio" checked> Count Up</label><br>
                         <label><input type="radio"> Countdown</label>
                     </div>
                 </div>
@@ -308,16 +255,16 @@
                 <div class="setting-group">
                     <h3>🚨 Alert Settings</h3>
                     <p>Alert at Time (seconds)</p>
-                    <input type="number" value="60"><br><br>
+                    <input type="number" value="60"><br>
                     <label><input type="checkbox"> Enable sound alerts</label>
                 </div>
 
                 <div class="setting-group">
                     <h3>📊 Session Stats</h3>
-                    <div style="margin: 8px 0;">Total Sessions: <strong>1</strong></div>
-                    <div style="margin: 8px 0;">Total Time: <strong id="totalTime">00:00:00</strong></div>
-                    <div style="margin: 8px 0;">Average: <strong>0</strong></div>
-                    <div style="margin: 8px 0;">Alerts Triggered: <strong>0</strong></div>
+                    <div>Total Sessions: <strong>1</strong></div>
+                    <div>Total Time: <strong id="totalTime">00:00:00</strong></div>
+                    <div>Average: <strong>0</strong></div>
+                    <div>Alerts Triggered: <strong>0</strong></div>
                 </div>
             </div>
         </div>
@@ -350,7 +297,7 @@
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 30px; padding-top: 25px; border-top: 1px solid #e5e7eb;">
+            <div style="text-align: center; margin-top: 30px;">
                 <p>Built with React and modern web technologies</p>
                 <div class="tech-icons">
                     <span>React</span>
@@ -389,7 +336,6 @@
                 }, 1000);
                 document.getElementById('startBtn').disabled = true;
                 document.getElementById('stopBtn').disabled = false;
-                updateDisplay();
             }
         }
 
