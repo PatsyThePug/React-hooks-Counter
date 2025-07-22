@@ -1,26 +1,27 @@
-# Contador de Segundos Vanilla JS - Proyecto Limpio
+# React Seconds Counter - Proyecto Educativo
 
 ## Overview
 
-Este es un contador de segundos educativo creado con **JavaScript puro** por **Patsy The Pug_dev**. Es un proyecto 100% libre de derechos de autor de terceros, sin frameworks ni dependencias externas. Demuestra conceptos básicos de JavaScript: DOM, eventos, temporizadores y clases ES6.
+Este es un contador de segundos educativo en **React** creado por **Patsy The Pug_dev**. Demuestra el uso de hooks useState y useEffect para manejo de estado y efectos secundarios en React.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+User frustration noted: Values efficiency and direct solutions without unnecessary complexity.
 
 ## System Architecture
 
 ### Project Type
-- **Type**: Static HTML/CSS/JavaScript Application
-- **Structure**: Single-file application (`index.html`)
-- **Deployment**: Static hosting (no server required)
-- **Dependencies**: None (vanilla JavaScript)
+- **Type**: React Web Application
+- **Structure**: Vite + React project
+- **Deployment**: Static hosting via Vite build
+- **Dependencies**: React, ReactDOM, Vite
 
 ### Technology Stack
-- **HTML5**: Semantic markup structure
-- **CSS3**: Modern styling with gradients, flexbox, and transitions
-- **JavaScript ES6+**: Class-based architecture with modern features
-- **No Build Process**: Direct deployment of source files
+- **React 18**: Modern hooks (useState, useEffect)
+- **Vite**: Fast build tool and dev server
+- **CSS3**: Component-based styling
+- **JavaScript ES6+**: Modern React patterns
 
 ## Key Components
 
