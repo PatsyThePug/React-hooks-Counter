@@ -2,11 +2,17 @@
 
 Contador educativo de React con hooks básicos.
 
-## 🚀 Usar
+## 🚀 Para GitHub
+
+1. Renombra `package-github.json` a `package.json`
+2. Sube los archivos:
 
 ```bash
-npm install
-npm run dev
+git init
+git add .
+git commit -m "Contador React educativo"  
+git remote add origin [tu-repo]
+git push -u origin main
 ```
 
 ## 💻 Código
