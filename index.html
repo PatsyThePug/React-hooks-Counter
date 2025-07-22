@@ -37,7 +37,10 @@
         }
         
         .logo img {
-            border-radius: 8px;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
         }
         
         .brand {
@@ -247,6 +250,48 @@
             color: #374151;
         }
         
+        .functions-section {
+            margin: 40px 0;
+        }
+        
+        .functions-section h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        
+        .functions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .function-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .function-item .icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .function-item h4 {
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+        
+        .function-item p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+        }
+        
         @media (max-width: 768px) {
             .main-container {
                 flex-direction: column;
@@ -266,7 +311,7 @@
     <div class="app">
         <div class="header">
             <div class="logo">
-                <img src="https://via.placeholder.com/60x60/FF6B35/FFFFFF?text=P" alt="Patsy Logo" />
+                <img src="patsy-logo.jpeg" alt="Patsy The Pug" />
                 <div>
                     <div class="brand">aprendiendo con patsy</div>
                     <div class="tagline">Patsy The Pug_dev</div>
@@ -350,13 +395,40 @@
                 </div>
             </div>
 
+            <div class="functions-section">
+                <h3>🔧 Funciones del Contador</h3>
+                <div class="functions-grid">
+                    <div class="function-item">
+                        <div class="icon">▶️</div>
+                        <div>
+                            <h4>Cuenta Regresiva</h4>
+                            <p>Inicia desde un número específico y cuenta hacia atrás</p>
+                        </div>
+                    </div>
+                    <div class="function-item">
+                        <div class="icon">🔄</div>
+                        <div>
+                            <h4>Controles</h4>
+                            <p>Funciones de pausa, reinicio y reanudación</p>
+                        </div>
+                    </div>
+                    <div class="function-item">
+                        <div class="icon">⚠️</div>
+                        <div>
+                            <h4>Alertas</h4>
+                            <p>Notificaciones cuando se cumple el tiempo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div style="text-align: center; margin-top: 30px; padding-top: 25px; border-top: 1px solid #e5e7eb;">
                 <p>Built with React and modern web technologies</p>
                 <div class="tech-icons">
-                    <span>React</span>
-                    <span>JavaScript</span>
-                    <span>CSS3</span>
-                    <span>Vite</span>
+                    <span>⚛️ React</span>
+                    <span>📜 JavaScript</span>
+                    <span>🎨 CSS3</span>
+                    <span>⚡ Vite</span>
                 </div>
             </div>
         </div>
