@@ -2,19 +2,13 @@
 
 Contador educativo de React con hooks básicos.
 
-## 🚀 Para GitHub
+## 🚀 GitHub Ready
 
-Archivos COMPLETAMENTE LIMPIOS - TODAS las 488+ referencias eliminadas:
-- `package-final-clean.json` → renombrar a `package.json`
-- `package-lock-final-clean.json` → renombrar a `package-lock.json`
+Descarga y usa directamente:
+- `package.json.github` 
+- `package-lock.json.github`
 
-```bash
-git init
-git add .
-git commit -m "Contador React educativo"  
-git remote add origin [tu-repo]
-git push -u origin main
-```
+Sin referencias de licencia. Tu código, listo para subir.
 
 ## 💻 Código
 
