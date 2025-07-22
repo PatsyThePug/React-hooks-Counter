@@ -10,91 +10,72 @@ Preferred communication style: Simple, everyday language.
 
 ## System Architecture
 
-### Frontend Architecture
-- **Framework**: React 18 with TypeScript
-- **Build Tool**: Vite for fast development and building
-- **Styling**: Tailwind CSS with shadcn/ui component library
-- **Routing**: Wouter for lightweight client-side routing
-- **State Management**: React hooks (useState, useEffect) for local state
-- **Query Management**: TanStack React Query for server state (though minimal server interaction in current implementation)
+### Project Type
+- **Type**: Static HTML/CSS/JavaScript Application
+- **Structure**: Single-file application (`index.html`)
+- **Deployment**: Static hosting (no server required)
+- **Dependencies**: None (vanilla JavaScript)
 
-### Backend Architecture
-- **Runtime**: Node.js with Express.js
-- **Language**: TypeScript with ES modules
-- **Database**: PostgreSQL configured with Drizzle ORM (Neon database)
-- **Session Management**: Basic in-memory storage with extensible interface
-
-### Component Structure
-- **UI Components**: shadcn/ui based component library in `client/src/components/ui/`
-- **Custom Components**: Counter-specific components in `client/src/components/`
-- **Pages**: Simple page structure with routing in `client/src/pages/`
+### Technology Stack
+- **HTML5**: Semantic markup structure
+- **CSS3**: Modern styling with gradients, flexbox, and transitions
+- **JavaScript ES6+**: Class-based architecture with modern features
+- **No Build Process**: Direct deployment of source files
 
 ## Key Components
 
-### Counter Implementation
-- **SimpleCounter**: Main counter component with basic start/stop/reset functionality
-- **SecondsCounter**: Enhanced version with additional features (appears to be in development)
-- **CounterDisplay**: Reusable display component for counter UI
-- **ControlButtons**: Button controls for counter operations
+### Application Structure
+- **SecondCounter Class**: ES6 class implementing counter logic
+- **HTML Structure**: Semantic HTML with container, display, and controls
+- **CSS Styling**: Modern responsive design with custom properties
+- **Event Handling**: DOM event listeners for user interactions
 
-### State Management
-- **useCounter Hook**: Custom hook for counter logic with support for elapsed/countdown modes
-- **Local State**: React useState for simple counter operations
-- **Session Stats**: Tracking runtime, sessions, and alerts
+### JavaScript Implementation
+- **Class-based Architecture**: `SecondCounter` class encapsulates all functionality
+- **State Management**: Simple properties (seconds, interval, isRunning)
+- **Timer Management**: `setInterval` and `clearInterval` for precise timing
+- **DOM Manipulation**: Direct element updates for real-time display
 
-### UI Components
-- Complete shadcn/ui component library integration
-- Custom styling with Tailwind CSS variables
-- Responsive design with mobile-first approach
-- Dark/light theme support via CSS variables
+### UI Features
+- **Counter Display**: Large, prominent seconds display
+- **Control Buttons**: Start, Stop, Reset with hover effects
+- **Status Indicator**: Dynamic status messages with color coding
+- **Responsive Design**: Mobile-friendly layout with flexbox
 
-## Data Flow
+## Application Flow
 
-### Client-Side Flow
-1. User interacts with counter controls (start/stop/reset buttons)
-2. State updates trigger re-renders of counter display
-3. Timer functionality managed through useEffect with setInterval
-4. Component state manages counter value, running state, and pause state
+### User Interaction Flow
+1. User clicks "Iniciar" (Start) button
+2. `SecondCounter.start()` method activates timer
+3. Counter increments every second via `setInterval`
+4. Display updates in real-time with `updateDisplay()`
+5. Status changes to "Contando..." (Counting...)
+6. User can stop or reset at any time
 
-### Server-Side Flow
-- Express server configured but minimal API implementation
-- Database schema defined for users table
-- Extensible storage interface for future CRUD operations
-- Development/production environment handling
-
-## External Dependencies
-
-### Core Dependencies
-- **React Ecosystem**: React, React DOM, React Query
-- **UI Libraries**: Radix UI primitives, Lucide React icons, React Icons
-- **Styling**: Tailwind CSS, class-variance-authority, clsx
-- **Forms**: React Hook Form with Zod validation
-- **Database**: Drizzle ORM with PostgreSQL adapter
-- **Build Tools**: Vite, TypeScript, ESBuild
-
-### Development Dependencies
-- Tailwind CSS plugins and Vite configuration
-- TypeScript configuration with path mapping
-- PostCSS for CSS processing
+### Code Architecture
+- **Initialization**: `constructor()` sets up elements and event listeners
+- **Event Binding**: `bindEvents()` connects buttons to methods
+- **Timer Control**: Start/stop methods manage `setInterval` lifecycle
+- **Display Updates**: `updateDisplay()` and `updateStatus()` handle UI changes
 
 ## Deployment Strategy
 
-### Build Process
-- **Frontend**: Vite builds React app to `dist/public`
-- **Backend**: ESBuild bundles server code to `dist/index.js`
-- **Database**: Drizzle Kit for schema management and migrations
+### Static Hosting Requirements
+- **No Build Process**: Direct deployment of `index.html`
+- **No Server Required**: Pure client-side application
+- **No Dependencies**: Self-contained single file
+- **Static Site Configuration**: Deployment type should be "static"
 
-### Environment Configuration
-- Development mode uses Vite dev server with HMR
-- Production mode serves static files from Express
-- Database connection via environment variable `DATABASE_URL`
-- Replit-specific plugins for development environment
+### Current Deployment Issue
+- **Problem**: Configured for Node.js deployment but it's a static site
+- **Solution**: Change deployment type from "autoscale" to "static"
+- **Remove**: Build commands, run commands, port configuration, environment variables
 
-### Scripts
-- `npm run dev`: Development server with hot reload
-- `npm run build`: Production build for both client and server
-- `npm run start`: Production server startup
-- `npm run db:push`: Database schema deployment
+### Correct Deployment Settings
+```toml
+[deployment]
+deploymentTarget = "static"
+```
 
 ## Project Ownership
 
