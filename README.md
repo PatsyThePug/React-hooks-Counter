@@ -4,11 +4,11 @@ Contador educativo de React con hooks básicos.
 
 ## 🚀 GitHub Ready
 
-Descarga y usa directamente:
-- `package.json.github` 
-- `package-lock.json.github`
+Usa estos archivos limpios:
+- `package.json.clean`
+- `package-lock.json.clean`
 
-Sin referencias de licencia. Tu código, listo para subir.
+Sin licencias. Tu código listo.
 
 ## 💻 Código
 
