@@ -28,31 +28,91 @@
             margin-bottom: 30px;
         }
         
-        .logo {
+        .github-profile {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto 20px;
         }
         
-        .logo img {
+        .profile-image {
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             object-fit: cover;
-            border: 3px solid #FF6B35;
+            object-position: center;
+            border: 4px solid #f1f5f9;
         }
         
-        .brand {
-            font-size: 1.2rem;
-            color: #FF6B35;
-            font-weight: 600;
+        .profile-info {
+            width: 100%;
         }
         
-        .tagline {
+        .profile-name {
+            font-size: 2.5rem;
+            color: #000000;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+        }
+        
+        .profile-username {
+            font-size: 1.3rem;
+            color: #000000;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .profile-bio {
+            font-size: 1.1rem;
+            color: #000000;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+        
+        .profile-details {
+            margin: 15px 0;
+        }
+        
+        .profile-location, .profile-joined {
+            font-size: 1.1rem;
+            color: #000000;
+            margin: 10px 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .github-link {
+            margin-top: 15px;
+        }
+        
+        .github-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #0969da;
+            text-decoration: none;
             font-size: 0.9rem;
-            color: #666;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: 1px solid #d1d9e0;
+            border-radius: 6px;
+            background: #f6f8fa;
+            transition: all 0.2s;
+        }
+        
+        .github-link a:hover {
+            background: #e7edf3;
+            border-color: #0969da;
         }
         
         .main-container {
@@ -243,12 +303,19 @@
             margin-top: 15px;
         }
         
-        .tech-icons span {
+        .tech-icons .tech-item {
             background: #e5e7eb;
             padding: 6px 12px;
             border-radius: 20px;
             font-size: 0.85rem;
             color: #374151;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .tech-item svg {
+            vertical-align: middle;
         }
         
         .functions-section {
@@ -311,11 +378,49 @@
 <body>
     <div class="app">
         <div class="header">
-            <div class="logo">
-                <img src="patsy-pug-icon.png" alt="Patsy The Pug" />
-                <div>
-                    <div class="brand">aprendiendo con patsy</div>
-                    <div class="tagline">Patsy The Pug_dev</div>
+            <div class="github-profile">
+                <!-- Profile Image Section -->
+                <div class="profile-avatar-section">
+                    <img src="patsy-github-profile.png" alt="Patsy The Pug_dev GitHub Profile" class="profile-image" />
+                </div>
+                
+                <!-- Name and Username Section -->
+                <div class="profile-identity-section">
+                    <h1 class="profile-name">Patsy The Pug_dev</h1>
+                    <div class="profile-username">PatsyThePug · she/her</div>
+                </div>
+                
+                <!-- Bio Section -->
+                <div class="profile-bio-section">
+                    <div class="profile-bio">Patsy Pugneranian, edición limitada con glitter. Debuggeo emociones, rombo código, duermo en deploy. Mini dev en entrenamiento, caos con patitas. 💻</div>
+                </div>
+                
+                <!-- Location and Details Section -->
+                <div class="profile-details-section">
+                    <div class="profile-location">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#6b7280">
+                            <path d="M12,2C15.31,2 18,4.66 18,7.95C18,12.41 12,19 12,19S6,12.41 6,7.95C6,4.66 8.69,2 12,2M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6Z"/>
+                        </svg>
+                        CIUDAD DE MEXICO
+                    </div>
+                    <div class="profile-joined">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#6b7280">
+                            <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6Z"/>
+                        </svg>
+                        Joined last month
+                    </div>
+                </div>
+                
+                <!-- GitHub Link Section -->
+                <div class="profile-links-section">
+                    <div class="github-link">
+                        <a href="https://github.com/PatsyThePug?tab=repositories" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#6b7280">
+                                <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                            </svg>
+                            Aprendiendo con Patsy
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -426,10 +531,34 @@
             <div style="text-align: center; margin-top: 30px; padding-top: 25px; border-top: 1px solid #e5e7eb;">
                 <p>Built with React and modern web technologies</p>
                 <div class="tech-icons">
-                    <span>⚛️ React</span>
-                    <span>📜 JavaScript</span>
-                    <span>🎨 CSS3</span>
-                    <span>⚡ Vite</span>
+                    <span class="tech-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#61DAFB">
+                            <circle cx="12" cy="12" r="2"/>
+                            <path d="M12,2C13.1,2 14,2.9 14,4C14,5.1 13.1,6 12,6C10.9,6 10,5.1 10,4C10,2.9 10.9,2 12,2M21,9V7L19,8L21,9M3,9L5,8L3,7V9M8,21H16V19H8V21Z"/>
+                        </svg>
+                        React
+                    </span>
+                    <span class="tech-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F7DF1E">
+                            <path d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z"/>
+                        </svg>
+                        JavaScript
+                    </span>
+                    <span class="tech-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#1572B6">
+                            <path d="M5,3L4.35,6.34H17.94L17.5,8.5H3.92L3.26,11.83H16.85L16.09,15.64L10.61,17.45L5.86,15.64L6.19,14H2.85L2.06,18L9.91,21L18.96,18L20.16,11.97L20.4,10.76L21.94,3H5Z"/>
+                        </svg>
+                        CSS3
+                    </span>
+                    <span class="tech-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#646CFF">
+                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4Z"/>
+                        </svg>
+                        Vite
+                    </span>
+                </div>
+                <div style="margin-top: 20px;">
+                    <img src="patsy-logo-footer.png" alt="Patsy The Pug .dev" style="max-width: 250px; height: auto; opacity: 0.8;" />
                 </div>
             </div>
         </div>
