@@ -69,76 +69,16 @@ Critical feedback: EXTREMELY frustrated with time wasted due to lack of proper b
 - **Timer Control**: Start/stop methods manage `setInterval` lifecycle
 - **Display Updates**: `updateDisplay()` and `updateStatus()` handle UI changes
 
-## Deployment Strategy
+## Deployment Fix
 
-### Static Hosting Requirements
-- **No Build Process**: Direct deployment of `index.html`
-- **No Server Required**: Pure client-side application
-- **Static Site Configuration**: Deployment type should be "static"
-
-### Current Deployment Issue
-- **Problem**: Configured for Node.js deployment but it's a static site
-- **Solution**: Change deployment type from "autoscale" to "static"
-- **Remove**: Build commands, run commands, port configuration, environment variables
-
-### DEPLOYMENT SOLUTION - MANUAL FIX REQUIRED
-
-**PROBLEMA**: El deployment falla porque está configurado como Node.js pero es un sitio estático.
-
-**SOLUCIÓN SIMPLE**: Cambiar UNA LÍNEA en `.replit`:
+**SOLUCIÓN**: Cambiar `.replit` de Node.js a estático:
 
 ```toml
-# CAMBIAR ESTA LÍNEA:
-deploymentTarget = "autoscale"
-
-# POR ESTA:
-deploymentTarget = "static"
-```
-
-**Y ELIMINAR TODO LO DEMÁS**:
-- Borrar: `build = ["npm", "run", "build"]`
-- Borrar: `run = ["npm", "run", "start"]`
-- Borrar: todas las secciones `[[ports]]`
-- Borrar: sección `[env]`
-
-**ARCHIVO FINAL `.replit` DEBE QUEDAR ASÍ**:
-```toml
-modules = ["nodejs-20", "web", "postgresql-16"]
-run = "npm run dev"
-hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
-
-[nix]
-channel = "stable-24_05"
-
 [deployment]
 deploymentTarget = "static"
-
-[workflows]
-runButton = "Project"
-
-[[workflows.workflow]]
-name = "Project"
-mode = "parallel"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Start application"
-
-[[workflows.workflow]]
-name = "Start application"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "npm run dev"
-waitForPort = 5000
 ```
 
-### Project Structure
-- **Main File**: `index.html` (aplicación completa y funcional)
-- **Development Setup**: React/Vite para desarrollo local
-- **Deployment**: Sitio estático directo
+Eliminar: build, run, ports, env.
 
 ## Current Status (Latest Session - July 22, 2025)
 
