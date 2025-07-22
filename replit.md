@@ -81,25 +81,64 @@ Critical feedback: EXTREMELY frustrated with time wasted due to lack of proper b
 - **Solution**: Change deployment type from "autoscale" to "static"
 - **Remove**: Build commands, run commands, port configuration, environment variables
 
-### Required Manual Changes in Replit Interface
-Since the `.replit` file cannot be edited programmatically, these changes must be made through the Replit interface:
+### DEPLOYMENT SOLUTION - MANUAL FIX REQUIRED
 
-1. **Change Deployment Target**: Set `deploymentTarget = "static"`
-2. **Remove Build Command**: Delete `build = ["npm", "run", "build"]`
-3. **Remove Run Command**: Delete `run = ["npm", "run", "start"]` 
-4. **Remove Port Configuration**: Delete all `[[ports]]` sections
-5. **Remove Environment Variables**: Delete `[env]` section
+**PROBLEMA**: El deployment falla porque está configurado como Node.js pero es un sitio estático.
 
-### Correct Deployment Settings
+**SOLUCIÓN SIMPLE**: Cambiar UNA LÍNEA en `.replit`:
+
 ```toml
-[deployment]
+# CAMBIAR ESTA LÍNEA:
+deploymentTarget = "autoscale"
+
+# POR ESTA:
 deploymentTarget = "static"
 ```
 
+**Y ELIMINAR TODO LO DEMÁS**:
+- Borrar: `build = ["npm", "run", "build"]`
+- Borrar: `run = ["npm", "run", "start"]`
+- Borrar: todas las secciones `[[ports]]`
+- Borrar: sección `[env]`
+
+**ARCHIVO FINAL `.replit` DEBE QUEDAR ASÍ**:
+```toml
+modules = ["nodejs-20", "web", "postgresql-16"]
+run = "npm run dev"
+hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+deploymentTarget = "static"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
+waitForPort = 5000
+```
+
 ### Project Structure
-- **Main File**: `index.html` (self-contained timer application)
-- **Development Setup**: React/Vite for future enhancements
-- **Current State**: Vanilla JavaScript timer with complete functionality
+- **Main File**: `index.html` (aplicación completa y funcional)
+- **Development Setup**: React/Vite para desarrollo local
+- **Deployment**: Sitio estático directo
 
 ## Current Status (Latest Session - July 22, 2025)
 
