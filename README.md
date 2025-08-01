@@ -4,6 +4,8 @@ Un cronómetro hecho con **React** y **TailwindCSS**, ideal para practicar hooks
 Inspirado por **Patsy The Pug_dev**, edición limitada con glitter 💖🐾.
 
 ![Vista previa](https://github.com/PatsyThePug/React-hooks-Counter/blob/main/vistaprevia.png)
+https://react-hooks-counter.vercel.app/
+https://subtle-cucurucho-515cf4.netlify.app/
 
 ## 🌟 Características
 
